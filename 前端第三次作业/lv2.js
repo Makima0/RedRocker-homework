@@ -30,3 +30,24 @@ function Push(arr) {
 let arr1 = Push([1,2])
 console.log(arr1);
 //lv2
+let arr2 =[1,[2,3],[4,5,[6,7,8]],9]
+function flatten1(arr) {
+    return arr.toString().split(',').map(item => +item)
+}
+let arr3=flatten1(arr2)
+console.log(arr3);
+
+function flatten2(arr){
+    let newArr =[];
+    for(let i =0,length = arr.length;i < length;i++){
+        if(Array.isArray(arr[i])){
+            newArr=newArr.contact(flatten2(arr[i]));
+        }
+        else{newArr.push(arr[i]);
+
+        }
+    }
+    return newArr;
+}
+let arr4=flatten2(arr2)
+console.log(arr4)

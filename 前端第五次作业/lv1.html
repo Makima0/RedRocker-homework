@@ -61,11 +61,26 @@
     <button id="button">显示</button>
     <script>
         let button=document.getElementById("button").addEventListener("click",color)
-        let text=document.getElementsByTagName("span")
+        let text=document.querySelectorAll('span')
+        let flag=1;
         function color(){
-          for(let i=0;i<text.length;i++){
-            text[i].style.backgroundColor="white";
+          
+          if(flag===1){
+            for(let i=0;i<text.length;i++){
+              text[i].style.backgroundColor="white";
+            }
+            flag=2
+          }else{
+            for(let i=0;i<text.length;i++){
+              text[i].style.backgroundColor="black";
+            }
+            flag=1}
+
+            
           }
-        }
+      
+        
+
+       
     </script>
   </body>

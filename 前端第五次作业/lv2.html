@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+<body>
+
+    <div>
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist">
+      <div id="text">
+        <input type="checkbox" value="内卷">内卷
+        <input type="checkbox" value="疯狂内卷">疯狂内卷
+        <input type="checkbox" value="拼命内卷">拼命内卷
+        <input type="checkbox" value="使劲内卷">使劲内卷
+      </div>       
+        <input id="全选" type="button" value="全选">
+        <input id="全不选" type="button" value="全不选">
+        <input id="反选" type="button" value="反选">
+    </div>
+
+</body>
+<script>
+    let button1=document.getElementById('全选').addEventListener("click",choose1)
+    let botton2=document.getElementById('全不选').addEventListener("click",choose2)
+    let botton3=document.getElementById('反选').addEventListener("click",choose3)
+    let text=document.getElementById('text').getElementsByTagName('input')
+    function choose1(){
+        for(let i=0;i<text.length;i++){
+            text[i].checked = true;
+        };
+    }
+    function choose2(){
+        for(let i=0;i<text.length;i++){
+            text[i].checked=false;
+        }
+    }
+    function choose3(){
+        let flag=true
+        for(let i=0;i<text.length;i++){
+            if(text[i].checked===true){
+               text[i].checked=false
+            }else{
+                text[i].checked=true
+            }
+        }
+    }
+</script>
+</html>

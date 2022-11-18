@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv3&lv4</title>
+    <style>
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+html,body{
+    height: 100%;
+}
+        .留言板{
+            border: 5px solid black;
+            height: 192px; width: 423px;
+            background-color: pink;
+        }
+        .button:hover{
+           color:aqua;
+        }
+    .first{
+       width: 423px ;
+       font-size: 25px; 
+    }
+    li button {
+        float: right;
+        font-size: 10px;
+    }
+    </style>
+</head>
+<body>
+    <textarea class="留言板"></textarea>
+    <div>
+        <button class="button" title="发一条善意的留言吧">发布</button>
+    <button id="red">发布红色留言</button>
+    <button id="blue">发布蓝色留言</button>
+    </div>
+    <ul class="first" id="de">
+    </ul>
+</body>
+<script>
+    let button=document.querySelector('.button').addEventListener('click',sent)
+    let text=document.querySelector('textarea')
+    let message=document.querySelector('ul')
+    let red=document.getElementById('red')
+    let blue=document.getElementById('blue')
+    red.addEventListener('click',sent);
+    red.addEventListener("click",function(){message.children[0].style.color="red"})
+    blue.addEventListener('click',sent);
+    blue.addEventListener("click",function(){message.children[0].style.color="blue"})
+        function sent(){
+           if(text.value ==''){
+           return false
+           } else{
+            let li=document.createElement('li')
+            li.innerHTML=text.value + "<button>删除</button>"
+            message.insertBefore(li,message.children[0])
+            return text.value = ''
+            //下面做的删除功能实现不了
+             for(let i=0;i < de.length; i++){
+                    let de =document.getElementById('de').getElementsByTagName('button')
+                    de[i].onclick=function () {
+                        message.removeChild(message.children[i])
+                }
+            }
+           }
+        }
+
+        
+</script>
+</html>

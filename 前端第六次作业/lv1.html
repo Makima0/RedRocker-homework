@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv1</title>
+    <style>
+html,body {
+    height: 100%;
+    width: 100%;
+}
+.box{
+    top: 50%;
+    left: 50%;
+    position: relative;
+    border-color: black;
+}
+.box div{
+    border-radius: 1000px;
+}
+.bl{
+    width: 40px;
+    background-color:  blue;
+    height: 40px;
+}
+.or{
+    width: 40px;
+    background-color:  orange;
+    height: 40px;
+}
+.gr{
+    width: 40px;
+    background-color: gray;
+    height: 40px;
+}
+    </style>
+</head>
+<body>
+<div class="box">   
+    <div class="bl"></div>
+    <div class="or"></div>
+    <div class="gr"></div>
+    <ul><button id="start1">方法1</button>
+        <button id="start2">方法2</button>
+        <button id="start3">方法3</button>
+    </ul>
+</div>     
+    <script>
+let start1=document.getElementById('start1').addEventListener('click',move1)
+let start2=document.getElementById('start2').addEventListener('click',move2)
+let start3=document.getElementById('start3').addEventListener('click',move3)
+let bl=document.querySelector('.bl')
+let or=document.querySelector('.or')
+let gr=document.querySelector('.gr')
+b=()=>{ bl.style.transform="translate(160px, 0px)"
+        bl.style.transition="1.5s"}
+o=()=>{ or.style.transform="translate(160px, 0px)"
+        or.style.transition="1.5s"}
+g=()=>{gr.style.transform="translate(160px, 0px)"
+       gr.style.transition="1.5s"}
+//方法1
+function move1(){
+    setTimeout(()=>{
+        b()
+        setTimeout(()=>{
+            o()
+            setTimeout(()=>{
+                g()
+            },1000)
+        },1000)
+    })
+
+}
+//方法2
+function move2(){
+    ball=(color,timer)=>new Promise((resolve)=>{
+        if(color==='bl'){
+        setTimeout(()=>{b()},timer)
+        }
+        if(color==='or'){
+        setTimeout(()=>{o()},timer)
+        }
+        if(color==='gr'){
+        setTimeout(()=>{g()},timer)
+        }
+        resolve(1)
+    })
+    move=()=>{ball('bl',10)
+    .then(()=>ball('or',1000))
+    .then(()=>ball('gr',2000))
+        }
+    move()
+}
+//方法3
+function move3(){
+    ball=(color,timer)=>new Promise((resolve)=>{
+        if(color==='bl'){
+        setTimeout(()=>{b()},timer)
+        }
+        if(color==='or'){
+        setTimeout(()=>{o()},timer)
+        }
+        if(color==='gr'){
+        setTimeout(()=>{g()},timer)
+        }
+        resolve(1)
+    })
+  m=async()=>{
+await ball('bl',10)
+await ball('or',1000)
+await ball('gr',2000)
+}
+m()
+}
+    </script>
+</body>
+</html>

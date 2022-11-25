@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+    <style>
+.box{
+    position: relative;
+    top: 20px;
+    left: 120px;
+    width: 450px;
+}
+.title{
+text-indent: 10em;
+}    
+div{
+    text-indent: 2em;
+}
+    </style>
+</head>
+<body>
+  <div class="box">  
+    <div class="title">《记承天寺夜游》</div>
+    <div id="text1"></div>
+    <span id="text2"></span>
+    <span id="text3"></span>
+    </div>
+    <script>
+      let text1=document.getElementById('text1')
+      let text2=document.getElementById('text2')
+      let text3=document.getElementById('text3')
+      let p1="元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。"
+      let p2="念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。"
+      let p3="庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。"
+      let word1=p1.split('')
+      let word2=p2.split('')
+      let word3=p3.split('')
+      let flag1=0
+      let flag2=0
+      let flag3=0
+      function showAll(){
+       show1=()=>{
+        if(flag1<word1.length){
+        // console.log(flag1);
+        copy1=text1.innerHTML
+        setTimeout(()=>{
+        text1.innerHTML=copy1+word1[flag1]
+        flag1++
+        show1()
+         },100)
+        }
+       }
+       show2=()=>{
+        if(flag2<word2.length){
+          // console.log(flag2);
+          copy2=text2.innerHTML
+          setTimeout(()=>{
+            text2.innerHTML=copy2+word2[flag2]
+            flag2++
+            show2()
+          },100)
+        }
+       }
+       show3=()=>{
+        if(flag3<word3.length){
+          copy3=text3.innerHTML
+          setTimeout(()=>{
+            text3.innerHTML=copy3+word3[flag3]
+            flag3++
+            show3()
+          },100)
+        }
+       }
+      
+       w=(word,timer)=>new Promise((resolve, reject) => {
+        
+          if(word==="word1"){
+            setTimeout(()=>{show1()},timer)
+          }
+          if(word==="word2"){
+            setTimeout(()=>{show2()},timer)
+          }
+          if(word==="word3"){
+            setTimeout(()=>{show3()},timer)
+          }
+        resolve(1)
+       })
+       ww=async()=>{
+        await w("word1",10)
+        await w("word2",2600)
+        await w("word3",5600)
+       }
+       ww()
+      }
+      showAll()
+    </script>
+</body>
+</html>

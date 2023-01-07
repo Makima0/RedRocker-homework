@@ -65,7 +65,7 @@ html,body{
              for(let i=0;i < de.length; i++){
                     let de =document.getElementById('de').getElementsByTagName('button')
                     de[i].onclick=function () {
-                        message.removeChild(message.children[i])
+                        document.getElementById("de").removeChild(button.parentNode)
                 }
             }
            }

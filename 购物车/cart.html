@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的购物车-苏宁易购</title>
+    <link rel="shortcut icon" type="image/x-icon" href="//passport.suning.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="cart.css">
+</head>
+
+<body>
+    <iframe name="tool-bar" width=100% height=35px marginwidth=0 marginheight=0 frameborder="no"
+        src="toolbarheader(cart).html"></iframe>
+    <!-- logo -->
+    <div class="cart-header">
+        <a href="index.html" class="cart-logo">
+            <img src="https://image2.suning.cn/uimg/cms/img/159601671210506961.png?v=2023010421">
+        </a>
+    </div>
+    <!-- logo -->
+    <!-- 商品 -->
+    <div class="cart-bg">
+        <div class="cart-wrapper wrapper cart">
+            <div class="m-cart-header">
+                <div class="cart-table-header">
+                    <div class="inner-box c6">
+                        <div class="th th-chk form th-chk-chkd">
+                            <div class="cart-checkbox">
+                                <input type="checkbox" id="chooseAllCheckBox" class="J-AllCheckBox"
+                                    name="icart1_goods_all01" aria-checked="false">
+                                <label for="chooseAllCheckBox" id="chooseAllCheckFrame1" role="checbox" name="chooseAllCheckFrame1"
+                                    aria-checked="false" title="全选购物车商品复选框" aria-label="全选购物车商品复选框"></label>
+                            </div>
+                            全选
+                        </div>
+                        <div class="th th-item">商品信息</div>
+                        <div class="th th-specs">规格</div>
+                        <div class="th th-price">单价（元）</div>
+                        <div class="th th-amount">数量</div>
+                        <div class="th th-sum">小计（元）</div>
+                        <div class="th th-op">操作</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-main clearfix">
+                    <div class="td td-chk form">
+                        <div class="cart-checkbox">
+                            <input name="icart1_goods_sel" type="checkbox" id="110030481694712704050385"
+                                class="checkbox chk-item" aria-checked="false">
+                            <label class="checklabel" role="checbox" aria-label="选择商品复选框" aria-checked="false"></label>
+                        </div>
+                    </div>
+                    <div class="td td-item">
+                        <div class="item-pic">                        
+                            <a href="" class="item-img-box tax-introduce tip-common-hover-fn-btn">
+                            <img src="" alt="" class="itemImg">
+                        </a></div>
+                        <div class="item-info">
+                        </div>
+                    </div>
+                    <div class="td td-specs"></div>
+                    <div class="td td-price"></div>
+                    <div class="td td-amount"></div>
+                    <div class="td td-sum">
+                        <b class="sn-price">
+                            <i>¥</i><em class="sum"></em>
+                        </b>
+                    </div>
+                    <div class="td td-op">
+                        <a href="javascript:;" style=" text-decoration: none;">移入关注</a><br>
+                        <a href="javascript:;" style="text-decoration: none;" class="delateBtn">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品 -->
+    <!-- 结算工具栏 -->
+    <div class="cart-toolbar-box" sap-modid="SHmD">
+        <input type="hidden" id="overSeaTaxFare" value="0.00">
+        <div class="cart-toolbar rel clearfix">
+            <div class="toolbar-box clearfix">
+                <i class="had-buy-arr"></i>
+                <div class="l-column l form rel" id="cart-toolbar-opt">
+                    <div class="cart-checkbox">
+                        <input name="icart1_ope_all" type="checkbox" id="chooseAllCheckBox2" class="J-AllCheckBox"
+                            aria-label="全选购物车商品复选框" aria-checked="false">
+                        <label for="chooseAllCheckBox2" class="mr10 clearfix">
+                            <i class="icon l"></i><span class="l"
+                                id="chooseAllCheckFrame2" role="checbox" aria-checked="false"
+                                aria-label="全选购物车商品复选框">全选</span></label>
+                    </div>
+                    <a href="javascript:;" class="del-selected ml20 tip-common-click-fn-btn" role="button" aria-label="删除选中商品" aria-hidden="true" tabindex="-1">删除选中商品
+                    </a>
+                </div>
+                <div class="r-column r  clearfix">
+                    <div class="cart-collect fl">
+                        <!-- 1115 dom结构变化  -->
+                        <!-- 总价 -->
+                        <div class="cart-total-price clearfix">
+                            <div class="split"></div>
+                            <div class="sn-sum-price rel">
+                                <p class="cart-sum-price">
+                                    <span id="totalName" aria-label="总价0.00元" tabindex="0">总价（含运费）：</span>
+                                    <b class="sn-price price-color">
+                                        <i>¥</i>
+                                        <em id="cart1PayAmount">0</em>
+                                    </b>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 已选优惠模块 -->
+                        <div class="save-ship">
+                            <!-- 已选商品 为您节省-->
+                            <div class="selected-prods clearfix">
+                                <!-- 为您节省-->
+                                <div class="alchose rel">
+                                    <a name="icart1_yxsp_change_cancel" href="javascript:void(0);"
+                                        class="now-select-goods">已选商品 <b
+                                            class="c-f70 ff-tahoma price-color">0</b>件<span
+                                            class="alchose-span alchose-up"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--  车一自动用券  919 -->
+                        </div>
+                    </div>
+                    <div class="cart-checkout l">
+                        <a class="checkout cart-btn checkout-disable-tip" href="javascript:void(0)"
+                            name="icart1_ope_buy01" role="button" aria-label="请至少选择一件商品，再去结算"
+                            title="请至少选择一件商品，再去结算"><b></b>去结算</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 结算工具栏 -->
+    <script>
+        // if(localStorage.item){
+        //     let AllItemData=JSON.parse(localStorage.item)
+        //     let itemData=[...AllItemData]
+        //     itemData.push({
+        //         img:1,
+        //         Message:1,
+        //         model:2,
+        //         price:3,
+        //         num:6,
+        //         sum:5
+        //         })
+        //     localStorage.item=JSON.stringify(itemData)
+        //     }
+        // else{
+        //     localStorage.item=JSON.stringify([{
+        //         img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
+        //         Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
+        //         model:'【宽911】650升 母婴抑菌 靓彩',
+        //         price:'2999',
+        //         num:'1',
+        //         sum:'2999'
+        //     }])
+        // }
+        // localStorage.clear()
+        let AllItem=JSON.parse(localStorage.item)
+        // 创建商品项目
+        let itembox = document.querySelector('.cart-wrapper')
+        let itmes = document.querySelectorAll('.item')[0]
+        let itmesCreat = () => {
+            itmes.style.display = "block"
+            let item = itmes.cloneNode(true)
+            itembox.appendChild(item)
+        }
+        for(i=1;i<AllItem.length+1;i++){
+            itmesCreat()
+            let newItem = document.querySelectorAll('.item')
+            let itemImg=document.querySelectorAll('.itemImg')
+            let itemInfo=document.querySelectorAll('.item-info')
+            let itemModel=document.querySelectorAll('.td-specs')
+            let itemprice=document.querySelectorAll('.td-price')
+            let itemtdAmount=document.querySelectorAll('.td-amount')
+            let itemSum=document.querySelectorAll('.sum')
+            itemImg[i].src=AllItem[i-1].img
+            itemInfo[i].innerHTML=AllItem[i-1].Message
+            itemModel[i].innerHTML=AllItem[i-1].model
+            itemprice[i].innerHTML=AllItem[i-1].price
+            itemtdAmount[i].innerHTML=AllItem[i-1].num
+            itemSum[i].innerHTML=AllItem[i-1].sum
+        }
+        let checklabel = document.querySelectorAll('.checklabel')
+        let itemDe=document.querySelectorAll('.delateBtn')
+        let newItem = document.querySelectorAll('.item')
+        for ( let i = 0; i <AllItem.length+1; i++) {
+            let newItem1=newItem[i]
+            let index=i
+            let newAllItem=[]
+            itemDe[i].addEventListener('click',()=>{
+                newItem1.parentNode.removeChild(newItem1)
+                delete AllItem[index-1]
+                for(let n=0;n<AllItem.length;n++){
+                    if(AllItem[n]){
+                        newAllItem.push(AllItem[n])
+                    }
+                }
+                localStorage.item=JSON.stringify(newAllItem)
+            })
+        }
+        //商品勾选
+        let flag = 0
+        let itemSum=document.querySelectorAll('.sum')
+        for (i = 0; i < checklabel.length; i++) {
+            let checklabel1 = checklabel[i]
+            let itemSum1=itemSum[i]
+            checklabel1.addEventListener('click', () => {
+                check(checklabel1, "-36px", "-20px",itemSum1)
+            })
+        }
+        let chooseAllCheckFrame= document.getElementById('chooseAllCheckFrame1')
+        chooseAllCheckFrame1.addEventListener('click', () => {
+            check(chooseAllCheckFrame1, "-36px", "-20px",0)
+            for (i = 1; i < checklabel.length; i++) {
+                let itemSum1=itemSum[i]
+                let checklabelAll = checklabel[i]
+                check(checklabelAll, "-36px", "-20px",itemSum1)
+            }
+        })
+        let icon=document.querySelector('.icon')
+        let chooseAllCheckFrame2=document.querySelector('.mr10')
+        chooseAllCheckFrame2.addEventListener('click',()=>{
+            check(icon, "-36px", "-20px",0)
+            for (i = 1; i < checklabel.length; i++) {
+                let checklabelAll = checklabel[i]
+                let itemSum1=itemSum[i]
+                check(checklabelAll, "-36px", "-20px",itemSum1)
+            }
+        })
+        function check(label, position1Change, positionBack,PayAmount) {
+            let sum=0
+            let cart1PayAmount=document.getElementById('cart1PayAmount')
+            let cartPayAmount=parseInt(cart1PayAmount.innerHTML)
+            let num
+            if(PayAmount==0){
+                num=0
+            }else{
+                num=parseInt(PayAmount.innerHTML)
+            }
+            if (label.style.backgroundPositionY == position1Change) {
+                label.style.backgroundPositionY = positionBack
+                sum=cartPayAmount-num
+                cart1PayAmount.innerHTML=sum
+            } else {
+                label.style.backgroundPositionY = position1Change
+                sum=cartPayAmount+num
+                cart1PayAmount.innerHTML=sum
+            }
+            console.log(sum);
+        }
+        itmes.style.display = "none"
+    </script>
+</body>
+
+</html>

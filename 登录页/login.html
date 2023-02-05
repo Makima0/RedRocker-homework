@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="//passport.suning.com/favicon.ico" >
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="header">
+        <div class="space"></div>
+        <a href="http://www.suning.com" class="logo"></a>
+        <div class="bind-phone">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号绑定验证！
+            <a target="_blank" href="https://sale.suning.com/all/regProtocol/yssm.html"><font color="#f60">《隐私政策》</font></a>
+            已上线，将更有利于保护您的个人隐私。
+        </div>
+        <a href="https://qss.suning.com/ea486.htm" target="_blank" class="advise"><i></i>我想对“登录”提意见</a>
+    </div>
+    <div class="main">
+            <a href="https://cuxiao.suning.com/scms/nhdjbfxhhc.html?safp=d488778a.8tLoX.oKx8J.1&amp;safpn=10009" target="_blank" class="nianhuo" >
+            </a>
+        <div class="login-form ">
+            <div class="tab">
+                <a href="javascript:void(0)"  class="code"  style="color: #f60;">
+                    <span>扫码登录</span>
+                    <i style="display: block;"></i>
+                </a>
+                <a href="javascript:void(0)"  class="account">
+                    <span>账户登录</span>
+                    <i style="display: none;"></i>
+                </a>
+            </div>
+            <div class="pclogin" style="display: none;">
+                <div class="username-login">
+                    <div class="username-box">
+                        <div class="input-box" id="username">
+                            <input id="usn" style="border: 1px solid #ccc;width: 274px;height: 36px;margin-left: 24px;padding-left: 36px;">
+                            <label class="defaultU" style="position: absolute;left: 60px;cursor: text" for="usn">用户名/手机/邮箱</label>
+                            <i class="username-icon"></i>
+                            <i class="clear"></i>
+                        </div>
+                        <div class="email-list hide"></div>
+                    </div>
+                    <div class="password-box">
+                        <div class="input-box" id="password">
+                            <input id="paw" style="border: 1px solid #ccc;width: 274px;height: 36px;margin-left: 24px;padding-left: 36px">
+                            <label class="defaultP" style="position: absolute;left: 60px;cursor: text" for="paw">密码</label>
+                            <i class="password-icon"></i>
+                            <i class="clear"></i>
+                        </div>
+                    </div>
+                    <div class="login-help-clearfix">
+                        <a class="switch-code-login" href="javascript:void(0)" style="float: left;">
+                            <i></i>短信验证码登录</a>
+                        <a id="FORGET_PWD" href="javascript:void(0);">忘记密码？</a>
+                        
+                    </div>
+                        <a id="submit" href="javascript:void(0)"class="login-submit">登 录</a>
+                </div>
+                <div class="phone-login"></div>
+            </div>
+            <div class="scanlogin" style="display: block;">
+                <div class="scan-box" style="padding-top: 30px;">
+                    <img class="qrcode" style="display: block;" src="https://passport.suning.com/ids/qrLoginUuidGenerate.htm?image=true&yys=1673178586024">
+                    <img class="qrcodetip" style="display:none;" src="https://res.suning.cn/project/passport/login/b2c_V7/image/scan.png">
+                    <div id="scanErrorTip">
+                        <div class="mask" style="display: none;">
+                            <p class="exception">二维码已失效</p>
+                            <a href="javascript:void(0)" class="button">点击刷新</a>
+                        </div>
+                   </div>
+                   <p class="open-app" style="font-size: 12px;">
+                      <i></i>
+                      打开
+                      <a id="DOWNLOAD_APP" href="http://sale.suning.com/syb/20120419xsjkhd/index.html?safp=d488778a.8tLoX.oKx8J.19&amp;safpn=10009">
+                        <em>苏宁易购APP</em>
+                      </a>扫码登录
+                   </p>
+                </div>
+            </div>  
+            <div class="free-reg" style="text-align: center;margin: 12px 0 35px">
+				<a id="FREE_TO_REG" href="reg.html">注册 有惊喜 &gt;</a>
+            </div>
+            <div class="bind-login">
+                <span class="title">使用以下账号登录</span>
+                <div class="commonclearfix">
+                    <a href="javascript:void(0);"><i id="qq"></i>QQ</a>
+                    <a href="javascript:void(0);"><i id="wechat"></i>微信</a>
+                    <a href="javascript:void(0);"><i id="yifubao"></i>易付宝</a>
+                    <a href="javascript:void(0);"><i id="weibo"></i>微博</a>
+                </div>
+                <div class="more">
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="login.js"></script>
+</body>
+</html>

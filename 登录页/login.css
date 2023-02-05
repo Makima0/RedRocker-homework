@@ -1,0 +1,299 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    padding:0px;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.header {
+    width: 970px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+.header .logo {
+    float: left;
+    width: 189px;
+    height: 100%;
+    background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/header190-60.png) '.'
+    position: absolute;
+    top: 0%;
+}
+.header .bind-phone {
+    float: right;
+    color: #333;
+    background: #fefff1;
+    border: 1px solid #fecd66;
+    line-height: 16px;
+    padding: 4px 6px;
+    font-size: 12px;
+}
+.space{
+    margin-left: 189px;
+    padding: 37px 0 0 16px;
+}
+.header .advise {
+    float: right;
+    margin-top: 8px;
+    font-size: 12px;
+    position: absolute;
+    right: 0%;
+    top: 60%;
+}
+.header .advise:hover{
+    color: #f60;
+}
+.header .advise i {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: simsun;
+    background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -67px -27px no-repeat;
+}
+.main{
+    padding-right: 10px;
+    background: url(https://image.suning.cn/uimg/cms/img/167290330480421242.jpg) center no-repeat;
+    height: 570px;
+    min-width: 970px;
+}
+.main .nianhuo{
+    width: 570px;
+    height: 100%;
+    float: left;
+}
+.login-form {
+    position: absolute;
+    width: 360px;
+    height: 410px;
+    margin-top: 50px;
+    background: #fff;
+    box-shadow: 0 2px 2px #ececec;
+    right: 17%;
+}
+.account,.code{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account:hover,.code:hover{
+color: #f60;
+}
+.tab{ 
+    height: 50px;
+    line-height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.account i,.code i{
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background: #f60;
+    bottom: -1px;
+    left: 50%;
+    margin-left: -35px;
+}
+.qrcode{
+    width: 141px;
+    height: 141px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.qrcodetip{
+    position: absolute;
+    top: 60px;
+    right: 34px;
+}
+.mask{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 160px;
+    height: 160px;
+    background: #000;
+    opacity: 0.7;
+}
+.mask p{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.8;
+}
+.mask a{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 28px;
+    margin-left: -50px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 2px;
+    background: #f60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.open-app i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -164px -67px no-repeat;
+    vertical-align: -3px;
+}
+#DOWNLOAD_APP{
+    color: #f60;
+}
+.open-app{
+    margin-bottom: 7px;
+    text-align: center;
+    position: absolute;
+    top: 266px;
+    left: 24%;
+    font-family:"Microsoft Yahei";
+}
+#FREE_TO_REG{
+    font-size: 12px;
+    color: #ff6600;
+    text-align: center;
+    position: absolute;
+    top: 315px;
+    left: 40%;
+}
+.bind-login span{
+    position: absolute;
+    top: 354px;
+    left: 50%;
+    margin-left: -64px;
+    color: #999;
+    width: 128px;
+    background: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+.commonclearfix a{
+    float: left;
+    font-size: 12px;
+    padding-right: 7px;
+    border-right :1px solid #ddd ;
+}
+.commonclearfix a:hover{
+    color: #f60;
+}
+.commonclearfix{
+    position: absolute;
+    left: 0%;
+    top: 360px;
+    width: 310px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-top: 1px solid #dedcd5;
+    padding: 19px 0 17px;
+}
+#qq{background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -140px -108px no-repeat;}
+#wechat{background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -90px -27px no-repeat;}
+#yifubao{background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -119px -108px no-repeat;}
+#weibo{background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) 0 -149px no-repeat;}
+.commonclearfix i{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#username {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 346px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: text;
+    background: #fff;
+    float: left;
+}
+#password{
+    position: absolute;
+    top: 140px;
+    left: 0;
+    line-height: 36px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: text;
+    background: #fff;
+    float: left;
+}
+.username-icon{
+    background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -123px -67px no-repeat;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 23px;
+}
+.password-icon{
+    background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) 0 -108px no-repeat;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 23px;
+}
+.login-help-clearfix {
+    position: relative;
+    top: 170px; 
+    width: 312px;
+    height: 25px;
+    padding-left :24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.switch-code-login i{
+    display: inline-block;
+    width: 13px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: -3px;
+    *vertical-align: 0;
+    background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -21px -149px no-repeat;
+}
+.switch-code-login:hover,#FORGET_PWD:hover{
+    color: #f60;
+}
+#submit{
+    display: block;
+    width: 310px;
+    line-height: 40px;
+    margin: 0 auto;
+    background: #f60;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 190px;
+}

@@ -1,0 +1,309 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+a, body {
+    color: #666;
+    text-decoration: none;
+}
+body {
+    position: relative;
+    background-color: #fff;
+    font: normal 12px/1.5 Arial,Microsoft YaHei,SimSun;
+    min-width: 1250px;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 arial,tahoma,\5b8b\4f53;
+}body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+}
+ul, li {
+    list-style: none;
+}
+.wrapper {
+    width: 1190px;
+    min-width: 1190px;
+    clear: both;
+    margin-left: 155px;
+}
+.proinfo {
+    position: relative;
+    z-index: 9;
+    margin-top: 10px;
+}
+.proinfo-container {
+    position: relative;
+    min-height: 520px;
+    background: #fff;
+}
+.proinfo-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 850px;
+    height: 400px;
+    z-index: 1;
+}
+.proinfo-left img {
+    position: absolute;
+    z-index: 1;
+    display: inline;
+    width: 400px;
+    height: 400px;
+}
+.bigger{
+    z-index: 1;
+    position: absolute;
+}
+.proinfo-main {
+    padding-right: 210px;
+    padding-left: 10px;
+    height: 540px;
+    width: 570px;
+}
+.proinfo-main {
+    position: relative;
+    margin-left: 400px;
+    padding: 0 0 8px 20px;
+    min-height: 520px;
+    z-index: 4;
+    *zoom: 1;
+}
+.proinfo-title {
+    padding: 13px 10px 12px;
+    background: #fff;
+}
+.proinfo-title h1 {
+    font: 700 16px/1.5 \5FAE\8F6F\96C5\9ED1;
+    color: #222;
+    _margin-left: -3px;
+    word-break: break-all;
+    min-height: 24px;
+}
+.priceDom {
+    height: 140px;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 0 0 8px;
+    z-index: 6;
+    padding: 24px;
+    position: relative;
+    min-height: 120px;
+    background: rgb(255, 248, 243);
+}
+.priceDom span{
+    display: inline-block;
+    width: 6em;
+}
+.price {
+    height: 28px;
+    font: 700 30px/25px Tahoma;
+    color: #e00;
+    *line-height: 30px;
+}
+.price i {
+    font-size: 18px;
+    font-family: Arial;
+}
+.proinfo-main dl dt span.w2 {
+    letter-spacing: 2em;
+}
+.proinfo-main dl dt span {
+    display: inline-block;
+    width: 6em;
+    font-family: simsun;
+}
+.proinfo-main dl dt {
+    float: left;
+    width: 70px;
+    padding-left: 10px;
+    color: #999;
+    overflow: hidden;
+    font-family: simsun;
+}
+.proinfo-main dl dt span.w2 {
+    letter-spacing: 2em;
+}
+.proinfo-main dl dt span {
+    display: inline-block;
+    width: 6em;
+    font-family: simsun;
+}
+.proinfo-main dl dd {
+    margin-left: 50px;
+}
+.proinfo-color-ex .clr-item {
+    float: left;
+    z-index: 666;
+    margin: 0 4px 5px 0;
+}
+.proinfo-color-ex .clr-item a {
+    display: block;
+    position: relative;
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    padding: 1px 8px 1px 1px;
+    border: 1px solid #ddd;
+    color: #666;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.proinfo-color-ex .clr-item a img {
+    float: left;
+    display: block;
+    height: 38px;
+    width: 38px;
+    margin-right: 6px;
+}
+.proinfo-color-ex .clr-item a span {
+    float: left;
+    max-width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.modelbox{
+    border-top: 1px dotted #ddd;
+}
+.proinfo-num dd .minus-disable {
+    background-image: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038);
+    background-position: -970px -668px;
+}
+.proinfo-num dd a {
+    float: left;
+    height: 30px;
+}
+.proinfo-num dd a.func {
+    width: 22px;
+}
+.proinfo-num dd .plus {
+    background-position: -992px -668px;
+}
+.proinfo-num dd .plus {
+    background-position: -992px -668px;
+}
+.proinfo-num dd .minus, .proinfo-num dd .plus {
+    background-image: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038);
+}
+.proinfo-num dd input {
+    float: left;
+    width: 25px;
+    height: 18px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    text-align: center;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    outline: 0;
+}
+.proinfo-num dd .tip {
+    float: left;
+    line-height: 30px;
+    margin-left: 10px;
+    color: #333;
+}
+.proinfo-num dd .tip em {
+    color: #f60;
+    font-family: Arial;
+}
+em, i {
+    font-style: normal;
+}
+.mainbtns .btn-dark-buy, .mainbtns .btn-super-buy {
+    font: 16px/40px microsoft yahei;
+    font-weight: 600;
+    border-radius: 3px;
+    height: 40px;
+}
+.mainbtns .btn-dark-buy {
+    background: #663200;
+    color: #fff;
+    width: 115px;
+    display: block;
+}
+.mainbtns a {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    color: #999;
+    text-align: center;
+}
+.mainbtns .btn-orange-buy {
+    background: #f50;
+    color: #fff;
+    font: 16px/40px microsoft yahei;
+    font-weight: 600;
+    border-radius: 3px;
+    width: 135px;
+    height: 40px;
+    display: block;
+}
+.mainbtns {
+    float: left;
+    position: relative;
+    padding: 8px 0px 20px 80px;
+    height: 68px;
+}
+.comments-toolbar {
+    background: #f7f7f7;
+    height: 47px;
+    position: relative;
+}
+.current a {
+    width: 150px;
+    position: relative;
+}
+.comments-toolbar li a {
+    height: 47px;
+    line-height: 47px;
+    padding: 0 25px;
+}
+.current a {
+    letter-spacing: 3em;
+    height: 35px;
+    line-height: 34px;
+    margin-top: -1px;
+    color: #f60;
+    border-top: 2px solid #f60;
+    background: #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.comments-toolbar li a {
+    padding: 0 10px;
+    font: normal 14px/34px \5FAE\8F6F\96C5\9ED1;
+    float: left;
+}
+li.current a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 1px;
+    background: #fff;
+}
+.imgzoom-shot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    cursor: move;
+    border: 1px solid #aaa;
+    background: #fede4f 50% top no-repeat;
+    opacity: .5;
+    filter: alpha(opacity=0);
+}

@@ -1,0 +1,328 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+input:focus{outline: none;}
+.header {
+    width: 990px;
+    height: 88px;
+    margin: 0 auto;
+}
+.header a{font-size: 12px;}
+.logo {
+    float: left;
+    width: 190px;
+    height: 100%;
+    margin-right: 24px;
+    background: url(https://res.suning.cn/project/srsregister/css/image/sprite.png?v=1541754766549) no-repeat;
+}
+.login {
+    float: right;
+    margin-top: 63px;
+}
+.login:hover{
+    color: #f60;
+}
+.logo-txt {
+    float: left;
+    font-size: 18px;
+    color: #666;
+    line-height: 88px;
+}
+.header.clearfix::after {
+    content: ".";
+    height: 0px;
+    display: block;
+    clear: both;
+    visibility: hidden;
+    color: #ff6600;
+}
+.reg-protocol{
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+    color: #222;
+    user-select: none;
+    position: fixed;
+    width: 610px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    margin-top: -215px;
+    margin-left: -305px;
+    z-index: 999;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .1;
+}
+.content {
+    position: absolute;
+    width: 556px;
+    height: 440px;
+    top: 5px;
+    left: 5px;
+    background: #fff;
+    padding: 0 22px;
+}
+.head {
+    height: 40px;
+    line-height: 40px;
+    box-shadow: inset 0 -1px 0 0 #ddd;
+}
+.head span {
+    float: left;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+}
+.head a {
+    float: right;
+    width: 14px;
+    height: 12px;
+    margin-top: 14px;
+    background: url(https://res.suning.cn/project/srsregister/css/image/sprite.png?v=1541754766549) -163px -93px no-repeat;
+    cursor: pointer;
+}
+.body p {
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+}
+.body p a {
+    color: #f60;
+    font-weight: 700;
+}
+.agree-btn {
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    text-align: center;
+    background: #f60;
+    font-size: 14px;
+    color: #fff;
+    margin: 6px auto 0;
+}
+.main{
+    width: 990px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-top: 3px solid #f90;
+    background: #fff;
+    padding: 55px 0;
+    line-height: 1.5;
+}
+.reg-form {
+    width: 380px;
+    margin: 0 auto;
+}
+.reg-error {
+    display: none;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: #323232;
+    background: #fff0f0;
+    border: 1px solid #ff3c3c;
+    margin-bottom: 10px;
+}
+.reg-error i {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 1px 8px 0 0;
+    background: url(https://res.suning.cn/project/srsregister/css/image/sprite.png?v=1541754766549) -99px -93px no-repeat;
+}
+.reg-form .input-box {
+    width: 378px;
+    height: 38px;
+    border: 1px solid #ccc;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+.reg-form .input-box .title {
+    float: left;
+    width: 76px;
+    padding-left: 11px;
+}
+.reg-form .input-box .input-wrapper input {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #333;
+    border: 0;
+    background: 0;
+}
+.reg-form .input-box .input-wrapper .placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #cacaca;
+    cursor: text;
+}
+.ok {
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 11px;
+    right: 12px;
+    background: url(https://res.suning.cn/project/srsregister/css/image/sprite.png?v=1541754766549) -120px -93px no-repeat;
+}
+.input-wrapper {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.send-msg {
+    float: left;
+    width: 148px;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    background: #f5f5f5;
+    border: 1px solid #bbb;
+    font-size: 14px;
+    margin: -1px -1px 0 0;
+    text-decoration: none;
+}
+.send-success {
+    height: 34px;
+    line-height: 34px;
+    margin-top: -25px;
+    color: #999;
+}
+.reg-form .gift-pkg {
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 2px;
+    margin-bottom: 17px;
+}
+.gift-pkg i {
+    float: left;
+    width: 19px;
+    height: 17px;
+    margin-right: 6px;
+    background: url(https://res.suning.cn/project/srsregister/css/image/sprite.png?v=1541754766549) -75px -93px no-repeat;
+}
+.gift-pkg em{
+    color:#f40
+}
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    background: #f60;
+    font-size: 20px;
+    color: #fff;
+    margin: 24px 0 5px;
+    border-radius: 2px;
+    text-align: center;
+}
+.container{
+    position:absolute;
+    padding: 2px 20px 20px;
+    background-color: #fff;
+    border: 5px solid #dcdcdc;
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+    width: 400px;
+    height: 296.8px;
+    display: flex;
+    top:27%;
+    left: 35%;
+    z-index: 8003;
+}
+.title{
+    width: 400px;
+    margin: 0%;
+}
+.title h3{
+    width: 100%;
+    height: 36px;
+    font: 700 14px/40px 'microsoft yahei';
+    color: #231815;
+    border-bottom: 1px solid #ddd;
+    /* _line-height: 45px; */
+    overflow: hidden;
+}
+.container a{
+    position:absolute;
+    left: 400px;
+    top: 13px;
+    width: 11px;
+    height: 11px;
+    background-image: url(https://res.suning.cn/project/srsregister/css/image/sprite.png?v=1541754766549);
+    background-position: 0 -118px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 9999;
+    overflow: hidden
+}
+.container .content {
+    position: absolute;
+    width: 390px;
+    height: 260px;
+    top: 38.8px;
+    left: 5px;
+    background: #fff;
+    padding: 0px 22px;
+    opacity:12;
+}
+.password-set-suggestion-dialog{
+    padding-top: 20px;
+}
+em{
+    font-style: normal;
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+    color: #999;
+    opacity:1;
+}
+#pswSuggestion{
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+}
+.security-level{
+    line-height: 22px;
+    font-size: 12px;
+    float:left;
+}
+.level3,.level2,.level1{
+    width: 50px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 2px;
+    color: #fff;
+    background: #cacaca;
+    margin-top: 3px;
+    float:right;
+}
+#pswSuggestion:hover{
+    color: #f60;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    height: 100%; 
+    width: 100%;
+    background: black; 
+    opacity: 0.3;
+    z-index: 8002;
+    display: none;
+}

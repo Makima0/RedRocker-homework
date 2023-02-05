@@ -1,0 +1,402 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background: #FFF;
+    color: #333;
+}
+.cart-checkbox input, .cart-radio input {
+    position: absolute;
+    top: -28px;
+    left: -38px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.form .label, .form button, .form input, .form label, .form select, .form textarea {
+    float: left;
+    vertical-align: top;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    outline: 0;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+.cart-header{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+.cart-logo{
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 100px;
+    margin-left: 155px;
+    overflow: hidden;
+}
+.wrapper {
+    margin-left: 155px;
+    width: 1190px;
+    min-width: 1190px;
+    clear: both;
+}
+.cart-table-header {
+    white-space: nowrap;
+    margin-bottom: 23px;
+}
+.cart-table-header .inner-box {
+    height: 32px;
+    border: 1px solid #ddd;
+}
+.c6 {
+    color: #666;
+}
+.root1200 .cart-table-header .th-chk {
+    width: 250px;
+}
+
+.cart-table-header .th-chk {
+    position: relative;
+    width: 226px;
+    text-align: left;
+    overflow: hidden;
+}
+.cart-table-header .th {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+}
+.cart-checkbox {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+.cart-checkbox, .cart-radio {
+    display: inline;
+    vertical-align: middle;
+}
+.cart-checkbox label {
+    width: 14px;
+    height: 14px;
+    background: url(https://res.suning.cn/project/ccf/css/images/lion-cart.png?v=c0878859d58b6406db003165ff81d198) 0 -20px;
+}
+.cart-checkbox label, .cart-radio label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+.form .label, .form button, .form input, .form label, .form select, .form textarea {
+    float: left;
+    vertical-align: top;
+}
+.cart-table-header .th {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+}
+/* 商品栏 */
+.cart-table-header .th-item {
+    width: 218px;
+}
+.cart-table-header .th-specs {
+    width: 145px;
+}
+.cart-table-header .th-price {
+    width: 153px;
+}
+.cart-table-header .th-amount {
+    width: 130px;
+}
+.cart-table-header .th-sum {
+    width: 175px;
+    padding-left: 15px;
+}
+.cart-table-header .th-op {
+    width: 100px;
+}
+ .item-checked {
+    background-color: #fffbf2;
+}
+.item {
+    position: relative;
+    height: 102px;
+    margin-bottom: -1px;
+    padding: 15px 20px;
+    border: 1px solid #dfdfdf;
+}
+.item .td {
+    height: 94px;
+}
+ .td-chk {
+    width: 47px;
+    position: relative;
+}
+.td {
+    float: left;
+}
+.td-item {
+    width: 362px;
+}
+.td-item .item-pic {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    background: #fff;
+    overflow: hidden;
+}
+.td-item .item-info {
+    width: 239px;
+    float: left;
+    line-height: 16px;
+}
+.td-specs {
+    position: relative;
+    width: 103px;
+}
+.td-price {
+    width: 106px;
+    text-align: right;
+}
+.td-amount {
+    width: 177px;
+    position: relative;
+    text-align: center;
+}
+.td-sum {
+    width: 126px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+b {
+    font-weight: bold;
+}
+.sn-price i {
+    font-family: Arial;
+}
+.sn-price em {
+    margin-left: 1px;
+}
+em, i {
+    font-style: normal;
+}
+.td-op {
+    padding-left: 115px;
+    width: 58px;
+    text-align: left;
+}
+.td-op a{
+    color: #666;
+}
+.td-op a:hover{
+    color: #f60;
+}
+.cart-checkbox {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+.cart-checkbox, .cart-radio {
+    display: inline;
+    vertical-align: middle;
+}
+.checkbox {
+    left: 53px;
+    top: 20px;
+}
+.cart-checkbox input, .cart-radio input {
+    position: absolute;
+    top: -28px;
+    left: -38px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.form .label, .form button, .form input, .form label, .form select, .form textarea {
+    float: left;
+    vertical-align: top;
+}
+.td-item .item-img-box {
+    display: block;
+    position: relative;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+/* 结算工具栏 */
+.cart-toolbar-box, .cart-total {
+    margin-top: 30px;
+}
+.clearfix {
+    zoom: 1;
+}
+.cart-toolbar {
+    margin-left: 155px;
+    width: 1188px;
+    height: 58px;
+    background: #FFF;
+    line-height: 58px;
+    border: 1px solid #ddd;
+}
+.cart-toolbar .toolbar-box {
+    width: 1188px;
+    position: relative;
+    margin: 0 auto;
+}
+.rel {
+    position: relative;
+}
+.l {
+    float: left;
+}
+.cart-toolbar .l-column .cart-checkbox {
+    position: relative;
+    width: auto;
+    height: 18px;
+    margin-top: 20px;
+}
+.cart-checkbox {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+.cart-toolbar .l-column label {
+    width: auto;
+    height: 18px;
+    background: 0;
+    line-height: 18px;
+}
+.cart-toolbar .l-column .cart-checkbox .icon {
+    width: 14px;
+    height: 14px;
+    margin: 2px 9px 0 0;
+    background: url(https://res.suning.cn/project/ccf/css/images/lion-cart.png?v=c0878859d58b6406db003165ff81d198) 0 -20px;
+}
+.cart-toolbar .toolbar-box .del-selected {
+    color: #666;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.r {
+    float: right;
+}
+.cart-collect, .cart-total {
+    text-align: right;
+}
+.fl {
+    float: left;
+}
+.cart-toolbar .alchose, .cart-toolbar .cart-total-price {
+    float: right;
+    line-height: 22px;
+}
+.cart-toolbar .cart-total-price .split {
+    float: left;
+    width: 1px;
+    height: 38px;
+    margin-top: 12px;
+    margin-right: 16px;
+    font-size: 0;
+    background: #ddd;
+}
+.cart-toolbar .cart-total-price .sn-sum-price {
+    float: left;
+}
+.rel {
+    position: relative;
+}
+.cart-toolbar .cart-total-price .sn-sum-price .cart-sum-price {
+    padding-top: 6px;
+}
+.cart-toolbar .cart-total-price .sn-sum-price .cart-sum-price span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+.cart-toolbar .cart-total-price .sn-sum-price .cart-sum-price .sn-price {
+    vertical-align: middle;
+    font-weight: 400;
+}
+.cart-toolbar .cart-total-price .sn-sum-price .cart-sum-price .sn-price i {
+    font-size: 14px;
+}
+.cart-toolbar .cart-total-price .sn-sum-price .cart-sum-price .sn-price em {
+    font-size: 22px;
+}
+.cart-toolbar .save-ship {
+    position: relative;
+    float: right;
+    overflow: visible;
+    color: #999;
+}
+.cart-toolbar .save-ship .selected-prods {
+    margin-top: 6px;
+}
+.cart-toolbar .alchose {
+    margin-top: 0;
+}
+.cart-toolbar .alchose, .cart-toolbar .cart-total-price {
+    float: right;
+    line-height: 22px;
+}
+.cart-toolbar .alchose {
+    margin-right: 20px;
+    cursor: pointer;
+}
+.cart-toolbar .alchose a {
+    color: #333;
+}
+.price-color {
+    color: #f60;
+}
+.ff-tahoma {
+    font-family: tahoma;
+}
+.cart-toolbar .cart-checkout {
+    position: relative;
+    padding-left: 15px;
+}
+.cart-toolbar .cart-checkout .checkout {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -1px;
+    margin-right: -1px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    background-color: #f60;
+}

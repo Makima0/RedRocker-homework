@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>确定订单信息-苏宁易购</title>
+    <link rel="shortcut icon" type="image/x-icon" href="//passport.suning.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="pay.css">
+</head>
+
+<body>
+    <iframe name="tool-bar" width=100% height=35px marginwidth=0 marginheight=0 frameborder="no"
+        src="toolbarheader(pay).html"></iframe>
+    <div class="cart-header" aria-label="苏宁易购 确认订单" title="苏宁易购 确认订单">
+        <div class="wrapper clearfix">
+            <div class="g-logo">
+                <a href="index.html"><img src="http://image2.suning.cn/uimg/cms/img/159601671210506961.png?v=2023010421"
+                        alt="苏宁易购" title="苏宁易购" aria-label="苏宁易购"></a>
+            </div>
+            <div class="r cart-progress" title="我的购物车 确认订单" aria-labelledby="我的购物车 确认订单">
+                <ul>
+                    <li class="finish finish-01"><i>1</i>
+                        <span>
+                            <a href="cart.html" name="new_cart2_top_mycar01">我的购物车</a>
+                        </span>
+                        <b class="progressBar1"></b>
+                    </li>
+                    <li class="finish finish-02"><i>2</i><span>确认订单</span>
+                        <b class="progressBar2"></b>
+                    </li>
+                    <li><i>3</i><span>付款</span>
+                        <b class="progressBar3"></b>
+                    </li>
+                    <li><i>4</i><span>支付成功</span>
+                        <b class="progressBar4"></b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper checkout mt10">
+        <div id="step2">
+            <div class="step">
+                <div class="payment-container">
+                    <div class="step-title link-box">
+                        <b>支付方式</b>
+                        <span class="pay-yh" style="display:none;" id="eppOrderPromotion"></span>
+                        <span class="pay-yh hide" style="" id="eppChannelPromotion">预计优惠1元</span>
+                    </div>
+                    <div class="step-content pay-benefits clearfix">
+                        <div class="pay-list">
+                            <ul class="clearfix">
+                                <li class="pay-item short-icon-item" paytype="01" name="new_icart2_pay_online01">
+                                    <span class="pay-way">苏宁支付</span>
+                                    <!--0727 在线支付优惠-->
+                                    <i class="check"></i>
+                                </li>
+                                <li class="pay-item short-icon-item " paytype="13" name="new_icart2_pay_alipay">
+                                    <span class="pay-way">支付宝</span>
+                                    <i class="check"></i>
+                                </li>
+                                <li class="pay-item short-icon-item pay-checked" style="border-color: #f60;" name="new_icart2_pay_wxpay">
+                                    <span class="pay-way">微信支付</span>
+                                    <i class="check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="goods-info-container">
+            <div class="step-title link-box">
+                <b class="l">商品及服务信息</b>
+                <a id="back_to_one" href="cart.html" class="l edit goods-edit" name="new_icart2_product_back" role="button" aria-label="返回我的购物车修改">返回我的购物车修改</a>
+                <span class="l"></span>
+            </div>
+            <div class="item">
+                <div class="item-main clearfix">
+                    <div class="td td-chk form">
+                        <div class="cart-checkbox">
+                            <input name="icart1_goods_sel" type="checkbox" id="110030481694712704050385"
+                                class="checkbox chk-item" aria-checked="false">
+                            <label class="checklabel" role="checbox" aria-label="选择商品复选框" aria-checked="false"></label>
+                        </div>
+                    </div>
+                    <div class="td td-item">
+                        <div class="item-pic">                        
+                            <a href="" class="item-img-box tax-introduce tip-common-hover-fn-btn">
+                            <img src="" alt="" class="itemImg">
+                        </a></div>
+                        <div class="item-info">
+                        </div>
+                    </div>
+                    <div class="td td-specs"></div>
+                    <div class="td td-price"></div>
+                    <div class="td td-amount"></div>
+                    <div class="td td-sum">
+                        <b class="sn-price">
+                            <i>¥</i><em class="sum"></em>
+                        </b>
+                    </div>
+                    <div class="td td-op">
+                        <a href="javascript:;" style=" text-decoration: none;">移入关注</a><br>
+                        <a href="javascript:;" style="text-decoration: none;" class="delateBtn">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

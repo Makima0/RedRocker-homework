@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+    <link rel="shortcut icon" type="image/x-icon" href="//passport.suning.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="order.css">
+</head>
+
+<body>
+    <iframe src="mysuning-tool-bar.html" width=100% height=100% marginwidth=0 marginheight=0 frameborder="no"></iframe>
+    <div class="order-box">
+        <div class="wrap-box">
+            <div class="order-nav clearfix" sap-modid="ordertype">
+                <h2 class="l" aria-label="我的订单" title="我的订单">我的订单:</h2>
+                <div class="classify l">
+                    <div class="l">
+                        <h3>
+                            <span class="act-classify" id="currOrderTypeContentOnline" name="ofsddzx_none_orderstab_t1"
+                                aria-label="我的订单" title="我的订单">我的订单</span>
+                        </h3>
+                    </div>
+                    <div class="l">
+                        <h3>
+                            <span id="currOrderTypeContentStore" name="ofsddzx_none_orderstab_t2" aria-label="门店订单按钮"
+                                title="门店订单按钮" role="button">门店订单</span>
+                        </h3>
+                    </div>
+                    <div class="l menuKa" id="nvDropKa">
+                        <h3 class="nv-selectedKa"><span aria-label="苏宁卡单选框" title="苏宁卡单选框" role="radio">苏宁卡</span></h3>
+                    </div>
+                    <div class="l menu" id="nvDrop">
+                        <h3 class="nv-selected" name="ofsddzx_none_orderstab_tx">
+                            <span id="otherOrderTypeName" aria-label="其他订单单选框" title="其他订单单选框" role="radio">其他订单</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <ul class="tit clearfix">
+                <li class="time" id="timeDrop">
+                    <h3 class="time-selected"><span aria-label="近三个月订单单选框" title="近三个月订单单选框" role="radio">近三个月订单</span>
+                    </h3>
+                    <div class="option time-list" style="display:none">
+                        <a title="近三个月订单" href="javascript:queryByTimePhase('3month');" id="tp3month"
+                            aria-label="近三个月订单单选框" role="radio">近三个月订单</a>
+                        <a title="今年订单" href="javascript:queryByTimePhase('1year');" id="tp1year" aria-label="今年订单单选框"
+                            role="radio">今年订单</a>
+                        <a title="2022年订单" href="javascript:queryByTimePhase('1-2year');" id="tp1-2year"
+                            aria-label="2022年订单单选框" role="radio">2022年订单</a>
+                        <a title="2022年以前订单" href="javascript:queryByTimePhase('before');" id="tpbefore"
+                            aria-label="2022年以前订单单选框" role="radio">2022年以前订单</a>
+                    </div>
+                </li>
+                <li class="price">
+                    <h3>单价</h3>
+                </li>
+                <li class="amount">
+                    <h3>数量</h3>
+                </li>
+                <li class="goods-operation">
+                    <h3>商品操作</h3>
+                </li>
+                <li class="get-people">
+                    <h3>收货人</h3>
+                </li>
+                <li class="total-price">
+                    <h3>支付总金额</h3>
+                </li>
+                <li class="state" id="ztDrop">
+                    <h3 class="zt-selected">
+                        <span id="selectedStatus" aria-label="订单状态" title="订单状态" role="radio">订单状态</span>
+                    </h3>
+                </li>
+                <li class="operation">
+                    <h3>操作</h3>
+                </li>
+            </ul>
+            <div class="orderItem">
+                <table>
+                    <tbody>
+                        <tr class="order-info">
+                            <td class="goods">
+                                <div class="goods-pic">
+                                    <img class="goodsImg" src="">
+                                </div>
+                                <ul class="goods-name">
+                                    <li class="orderMessage">
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="price"><span class="orderPrice"></span></td>
+                            <td class="amount"><span class="orderNum"></span></td>
+                            <td class="goods-operation"></td>
+                            <td class="get-people">
+                                <p class="opt-item personal-msg">
+                                    <span class="tax-introduce tip-common-hover-fn-btn" ><i></i>曾庆玺</span>
+                                </p>
+                            </td>
+                            <td class="total-price">
+                                <p class="opt-item" title="支付1339.00元" aria-label="支付1339.00元" tabindex="0" role="listitem">
+                                    <i>¥</i>
+                                    <span class="ordersum"></span>
+                                </p>
+                            </td>
+                            <td class="state">
+                                <p class="opt-item" title="订单状态待支付" aria-label="订单状态待支付" tabindex="0" role="listitem">待支付</p>
+                            </td>
+                            <td class="operation operation-tip">
+                                <div>
+                                    <a class="bnt bnt-orange" href="pay.html" name="ofsddzx_none_list_pay" aria-label="马上支付" title="马上支付" role="button">马上支付</a>
+                                    <br><a  href="javascript:;" class="orderDe">取消订单</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="order.js"></script>
+</body>
+
+</html>

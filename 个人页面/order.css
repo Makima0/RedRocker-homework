@@ -1,0 +1,298 @@
+html,body{
+    padding:0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2
+}
+html {
+    scroll-behavior: smooth;
+    top: 0px;
+  }
+a{
+    text-decoration: none;
+    color: #333;
+}
+body {
+    line-height: 1.4;
+    color: #333;
+    font-size: 12px;
+    background: #FFF;
+    color: #333;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+}
+ul, ol {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, form {
+    margin: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+.order-box {
+    position: absolute;
+    top:0px;
+    height: 1200px;
+    width: 100%;
+    float: left;
+    margin: 110px 0 10px 315px;
+    font-family: "Microsoft YaHei";
+    color: #333;
+    z-index: 8;
+}
+.wrap-box {
+    position: relative;
+    width: 1020px;
+    height: 100%;
+    border: 1px solid #ddd;
+    background: #fff url(https://res.suning.cn/project/ofs/css/images/bg-date.png?v=ef9bbd45cf04dce44991244ba86d02b9) no-repeat left top;
+    z-index: 9;
+}
+.order-nav {
+    padding: 38px 0 18px 20px;
+}
+.order-nav h2 {
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+}
+.order-nav .classify {
+    font-size: 12px;
+}
+.order-nav .classify>div {
+    position: relative;
+}
+.order-nav .classify div h3 {
+    height: 28px;
+    padding: 0 16px;
+    border: 1px solid #FFF;
+    line-height: 28px;
+    text-align: center;
+    font-weight: normal;
+}
+.order-nav .classify div h3 span.act-classify {
+    border-bottom: 2px solid #F60;
+    color: #F60;
+    font-weight: bold;
+}
+.order-nav .classify div h3 span {
+    padding-bottom: 5px;
+    cursor: pointer;
+    *padding-bottom: 3px;
+}
+.l {
+    float: left;
+}
+.classify>div {
+    position: relative;
+}
+.tit {
+    position: relative;
+    z-index: 5;
+    width: 980px;
+    height: 30px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.tit .time {
+    width: 300px;
+}
+.tit li {
+    float: left;
+}
+.tit li h3 {
+    float: left;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 12px;
+}
+.tit li.time h3 {
+    text-align: left;
+}
+.tit .time span {
+    float: left;
+    display: inline-block;
+    text-align: left;
+    width: 135px;
+    height: 28px;
+    border: 1px solid #f5f5f5;
+    background-position: 113px center;
+    cursor: pointer;
+    text-indent: 20px;
+}
+.tit .price {
+    width: 100px;
+}
+.tit .amount {
+    width: 50px;
+}
+.tit .goods-operation {
+    width: 90px;
+}
+.tit .get-people {
+    width: 110px;
+}
+.tit .total-price {
+    width: 110px;
+}
+.tit .state {
+    width: 110px;
+}
+.tit .operation {
+    width: 110px;
+}
+.orderItem{
+    margin: 20px;
+    width: 980px;
+    height: 100px;
+}
+.order-info .goods {
+    position: relative;
+    width: 294px;
+    padding-left: 10px;
+    text-align: left;
+}
+.goods-pic {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #efefef;
+}
+.goods-pic img {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+.goods-name {
+    float: left;
+    width: 180px;
+    margin-left: 15px;
+}
+.goods-name li {
+    height: 40px;
+    float: left;
+    width: 180px;
+    line-height: 20px;
+}
+.order-info .price {
+    width: 100px;
+}
+.order-info .opt-item {
+    height: 14px;
+    margin-bottom: 10px;
+}
+b, em, i {
+    font-weight: normal;
+    font-style: normal;
+}
+.order-info .amount {
+    width: 50px;
+}
+.order-info td {
+    padding: 10px 0;
+    border-right: 1px solid #e5e5e5;
+    vertical-align: top;
+    text-align: center;
+    border-collapse: collapse;
+}
+.order-info .goods-operation {
+    width: 90px;
+}
+.order-info .get-people {
+    width: 109px;
+}
+.order-info .opt-item {
+    width: 110px;
+    height: 14px;
+    margin-bottom: 10px;
+}
+.personal-msg .tip-common-hover-fn-btn {
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 65px;
+    cursor: pointer;
+    display: inline-block;
+    background: #fff;
+}
+.tax-introduce {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px 0 4px;
+    height: 20px;
+    background: #fff;
+    color: #333;
+    line-height: 21px;
+    margin-right: 5px;
+}
+.personal-msg i {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    *top: -1px;
+    background: url(https://res.suning.cn/project/ofs/css/images/ic-order.png?v=6133906661a1453dfb75d0efbdee64af)no-repeat -287px -109px;
+    margin-right: 0;
+}
+.order-info .total-price {
+    width: 110px;
+}
+.order-info .total-price {
+    text-align: center;
+}
+.order-info .opt-item {
+    height: 14px;
+    margin-bottom: 10px;
+}
+.order-info .total-price i {
+    color: #000;
+    font-family: Arial;
+    font-weight: bold;
+}
+.order-info .total-price span {
+    color: #000;
+    font-family: 'Tahoma';
+    font-weight: bold;
+}
+.order-info .state {
+    width: 110px;
+}
+.order-info .operation {
+    width: 110px;
+}
+.order-info .operation div {
+    margin-bottom: 3px;
+}
+.bnt-orange {
+    background-color: #f90;
+    color: #FFF;
+}
+.bnt {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 12px;
+    border-radius: 2px;
+    _line-height: 28px;
+    overflow: hidden;
+}
+.orderItem{
+    border:.3px solid  #f2f2f2;
+}

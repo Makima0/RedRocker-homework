@@ -1,0 +1,202 @@
+body {
+    background: #FFF;
+    color: #333;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+    -webkit-font-smoothing: antialiased;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    outline: 0;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+em, i {
+    font-style: normal;
+}
+/* logo */
+.cart-header {
+    min-width: 1190px;
+    min-width: 990px;
+    background-color: #fff;
+}
+.wrapper {
+    width: 1190px;
+    min-width: 1190px;
+    clear: both;
+    margin: 0 auto;
+}
+.g-logo {
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 100px;
+    overflow: hidden;
+}
+.g-logo img {
+    margin-top: 20px;
+}
+fieldset, img {
+    border: 0px;
+}
+.cart-progress {
+    margin-top: 26px;
+    background: url(https://res.suning.cn/project/ccf/css/images/steps-bg.png?v=cf33e972e140c67405b83dc8e45112ec) 60px 0 no-repeat;
+}
+.r {
+    float: right;
+}
+.cart-progress li {
+    position: relative;
+    float: left;
+    width: 144px;
+    text-align: center;
+}
+.cart-progress .finish i {
+    color: #FFF;
+}
+.cart-progress li i {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 6px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #BBB;
+    z-index: 10;
+}
+.cart-progress li span {
+    color: #333;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.finish-01 b {
+    width: 25px;
+    left: 60px;
+    background-position: 0 0;
+}
+.finish b {
+    position: absolute;
+    display: inline-block;
+    height: 24px;
+    top: 0;
+    background: url(https://res.suning.cn/project/ccf/css/images/steps-new.png?v=62a138530a7cf6376f9bb272e0bb65dd) no-repeat;
+}
+.wrapper {
+    width: 1190px;
+    min-width: 1190px;
+    clear: both;
+}
+.checkout {
+    margin-bottom: 40px;
+}
+.step {
+    margin-bottom: 10px;
+}
+.payment-container {
+    z-index: 1;
+}
+.payment-container {
+    position: relative;
+}
+.step-title {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+.step-title b {
+    font: 700 16px/36px "Microsoft YaHei";
+    color: #221814;
+}
+.payment-container .pay-yh {
+    display: inline;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 3px;
+    color: #fff;
+    background: #f50;
+    margin-left: 6px;
+    margin-right: 4px;
+}
+.payment-container .step-content {
+    padding: 0;
+    border: 0;
+}
+.step-content {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+.clearfix {
+    zoom: 1;
+}
+.payment-container .pay-list {
+    position: relative;
+}
+.payment-container .pay-list ul {
+    margin-top: -14px;
+}
+.payment-container .pay-list .pay-item {
+    margin-right: 14px;
+}
+
+.payment-container .pay-benefits .pay-item {
+    margin-bottom: 15px;
+}
+.payment-container .pay-list .pay-item {
+    position: relative;
+    float: left;
+    width: 220px;
+    height: 38px;
+    margin-right: 13px;
+    margin-top: 14px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.payment-container .pay-list .pay-item .pay-way {
+    font-family: "Microsoft YaHei";
+    line-height: 38px;
+    font-size: 15px;
+}
+.pay-checked .pay-way {
+    line-height: 38px;
+}
+.pay-checked .check {
+    right: 0;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: url(https://res.suning.cn/project/ccf/css/images/lion-cart.png?v=c0878859d58b6406db003165ff81d198) -109px -138px no-repeat;
+    position: absolute;
+    bottom: 0;
+}
+.step-title {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}

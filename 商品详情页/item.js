@@ -1,12 +1,30 @@
 let itemImg=document.querySelector('.itemImg')
 let bigger=document.querySelector('.bigger')
 let itemMessage=document.querySelector('.message')
+let modelimg=document.querySelectorAll('.modelimg')
+let modelcontent=document.querySelectorAll('.modelcontent')
 let price=document.querySelector(".price")
 if(localStorage.itemData){
     let itemData=JSON.parse(localStorage.itemData)
     document.querySelector('title').innerHTML=itemData.Message
     itemImg.src=itemData.img
     bigger.src=itemData.img
+    for(let i=0;i<4;i++){
+        modelimg[i].src=itemData.img
+        modelcontent[i].innerHTML=itemData.model
+    }
+    price.innerHTML="<i>￥</i>"+itemData.price
+    itemMessage.innerHTML=itemData.Message
+}
+if(localStorage.orderID){
+    let itemData=JSON.parse(localStorage.orderID)
+    document.querySelector('title').innerHTML=itemData.Message
+    itemImg.src=itemData.img
+    bigger.src=itemData.img
+    for(let i=0;i<4;i++){
+        modelimg[i].src=itemData.img
+        modelcontent[i].innerHTML=itemData.model
+    }
     price.innerHTML="<i>￥</i>"+itemData.price
     itemMessage.innerHTML=itemData.Message
 }

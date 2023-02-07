@@ -3,8 +3,7 @@ let progressBar2=document.querySelector('.progressBar2')
 let progressBar3=document.querySelector('.progressBar3')
 let progressBar4=document.querySelector('.progressBar4')
 
-// let AllItem=JSON.parse(localStorage.order)
-let AllItem=[]
+let AllItem=JSON.parse(localStorage.order)
 let itembox = document.querySelector('.goods-info-container')
 let itmes = document.querySelectorAll('.item')[0]
 let itmesCreat = () => {
@@ -14,6 +13,7 @@ let itmesCreat = () => {
 }
 for(i=1;i<AllItem.length+1;i++){
     itmesCreat()
+    console.log(111);
     let newItem = document.querySelectorAll('.item')
     let itemImg=document.querySelectorAll('.itemImg')
     let itemInfo=document.querySelectorAll('.item-info')
@@ -67,3 +67,5 @@ let submitBtn=document.querySelector('.submit-btn').addEventListener('click',()=
     progressBar3.style.left="-74px"
     ORCodebox.style.display="flex"
 })
+
+itmes.style.display = "none"

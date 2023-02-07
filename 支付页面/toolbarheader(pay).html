@@ -125,7 +125,7 @@ function getLocalStorage(){
         username.innerHTML=JSON.parse(localStorage.loginID)
     }
     if(localStorage.item){
-        let itmeData=localStorage.item
+        let itmeData=JSON.parse(localStorage.item)
         document.querySelector('.cart').innerHTML="购物车"+itmeData.length
     }
     console.log(itmeData.length);

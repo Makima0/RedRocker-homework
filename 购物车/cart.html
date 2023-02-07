@@ -153,14 +153,14 @@
         //     localStorage.item=JSON.stringify(itemData)
         //     }
         // else{
-            localStorage.item=JSON.stringify([{
-                img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
-                Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
-                model:'【宽911】650升 母婴抑菌 靓彩',
-                price:'2999',
-                num:'1',
-                sum:'2999'
-            }])
+            // localStorage.item=JSON.stringify([{
+            //     img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
+            //     Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
+            //     model:'【宽911】650升 母婴抑菌 靓彩',
+            //     price:'2999',
+            //     num:'1',
+            //     sum:'2999'
+            // }])
         // }
         // localStorage.clear()
         let AllItem=JSON.parse(localStorage.item)
@@ -274,6 +274,8 @@
                     if(checklabel[i].style.backgroundPositionY == "-36px"){
                         itemOrder.push(AllItem[i-1])
                         remove(newItem[i],i)
+                        // itmesCreat()
+                        // itmes.parentNode.removeChild(itmes)
                     }
                 }
             }else{
@@ -281,6 +283,8 @@
                     if(checklabel[i].style.backgroundPositionY == "-36px"){
                         itemOrder.push(newAllItem[i-1])
                         remove(newItem[i],i)
+                        // itmesCreat()
+                        // itmes.parentNode.removeChild(itmes)
                     }
                 }    
             }

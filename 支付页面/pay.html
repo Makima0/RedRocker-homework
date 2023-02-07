@@ -12,7 +12,7 @@
 
 <body>
     <iframe name="tool-bar" width=100% height=35px marginwidth=0 marginheight=0 frameborder="no"
-        src="toolbarheader(pay).html"></iframe>
+        src="toolbarheader.html"></iframe>
     <div class="cart-header" aria-label="苏宁易购 确认订单" title="苏宁易购 确认订单">
         <div class="wrapper clearfix">
             <div class="g-logo">
@@ -80,7 +80,7 @@
                 <a id="back_to_one" href="cart.html" class="l edit goods-edit" name="new_icart2_product_back" role="button" aria-label="返回我的购物车修改">返回我的购物车修改</a>
                 <span class="l"></span>
             </div>
-            <div class="item">
+            <div class="item" style="display: none;">
                 <div class="item-main clearfix">
                     <div class="td td-item">
                         <div class="item-pic">                        
@@ -103,11 +103,13 @@
                     </div>
                 </div>
             </div>
-            <p class="sum-pay-price sum-pay-price-sp">
-	        	<span id="sum-pay-text" tabindex="0" aria-label="应付金额899.00元">应付金额：</span>
-	        	<span class="sn-price price-color"><i>¥</i><em id="payAmountID"></em></span><br>
+        </div>
+        <div>
+            <p class="sum-pay-price sum-pay-price-sp" style="position: relative;">
+                <span id="sum-pay-text" tabindex="0" >应付金额：</span>
+                <span class="sn-price price-color"><i>¥</i><em id="payAmountID"></em></span><br>
                 <a class="submit-btn">提交订单</a>
-	        </p>
+            </p>
         </div>
     </div>
     <script src="pay.js"></script>

@@ -63,7 +63,6 @@ function move(e){
 }
 let items=JSON.parse(localStorage.itemData)
 let buyNum=document.getElementById('buyNum')
-console.log(items);
 // localStorage.removeItem('item')
 let addCart=document.getElementById('addCart').addEventListener("click",()=>{
     items.num=buyNum.value
@@ -74,23 +73,20 @@ let addCart=document.getElementById('addCart').addEventListener("click",()=>{
         let itemData=[...AllItemData]
         let flag=0
             for(let i=0,len=itemData.length;i<len;i++){
-                // console.log(JSON.stringify(items));
                 // console.log(JSON.stringify(AllItemData[i]));
-                if(JSON.stringify(items)===JSON.stringify(itemData[i])){
-                    
+                let itemData1=itemData[i]
+                if(JSON.stringify(items)===JSON.stringify(itemData1)){
+                    console.log(itemData1);
                 }else{
                     flag++               
                 }
-                if(flag===len){
-                    itemData.push(items)
-                    localStorage.item=JSON.stringify(itemData)
-                }
-                console.log(flag);
             }
-            console.log(JSON.parse(localStorage.item))
-            ;}
-    else{
-        localStorage.item=JSON.stringify([items])
-    }
-    console.log(JSON.parse(localStorage.item));
+            if(flag==itemData.length){
+                itemData.push(items)
+                localStorage.item=JSON.stringify(itemData)
+            }
+        }else{
+            console.log(items);
+            localStorage.item=JSON.stringify([items])
+        }
 })

@@ -97,10 +97,10 @@ a{
         <a href="javascript:void(0)" id="address" style="display: block;"><span>重庆</span><em>.</em></a>
         <a href="login.html" target="_blank"><span>请登录</span><em></em></a>
         <a href="reg.html" target="_blank"><span style="color: #ff6600;">注册有礼</span><em></em></a>
-        <a href="order.html"><span>我的订单</span><em></em></a>
-        <a href="mysuning.html"><span>我的易购</span><em></em></a>
+        <a href="javascript:;"><span>我的订单</span><em></em></a>
+        <a href="javascript:;"><span>我的易购</span><em></em></a>
         <a href="javascript:void(0)"><span>苏宁会员</span><em></em></a>
-        <a href="cart.html"><span style="color: #ff6600;" class="cart">购物车</span><em>.</em></a>
+        <a href="javascript:;"><span style="color: #ff6600;" class="cart">购物车</span><em>.</em></a>
         <a href="javascript:void(0)"><span>易付宝</span><em></em></a>
         <a href="javascript:void(0)"><span>企业采购</span><em></em></a>
         <a href="javascript:void(0)"><span>手机苏宁</span><em></em></a>
@@ -125,11 +125,21 @@ function getLocalStorage(){
         username.innerHTML=JSON.parse(localStorage.loginID)
     }
     if(localStorage.item){
-        let itmeData=localStorage.item
+        let itmeData=JSON.parse(localStorage.item)
         document.querySelector('.cart').innerHTML="购物车"+itmeData.length
     }
 }
 getLocalStorage()
+let a=document.getElementsByTagName('a')
+a[7].onclick=()=>{
+    window.open('order.html')
+}
+a[8].onclick=()=>{
+    window.open('mysuning.html')
+}
+a[10].onclick=()=>{
+    window.open('cart.html')
+}
 </script>
 </body>
 </html>

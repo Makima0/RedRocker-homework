@@ -4,14 +4,14 @@ if(localStorage.loginID){
 let myOrder=document.querySelector('.my-order')
 let orderBox=document.querySelectorAll('.orderBox')[0]
 
-localStorage.order=JSON.stringify([{
-    img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
-    Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
-    model:'【宽911】650升 母婴抑菌 靓彩',
-    price:'2999',
-    num:'1',
-    sum:'2999'
-}])
+// localStorage.order=JSON.stringify([{
+//     img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
+//     Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
+//     model:'【宽911】650升 母婴抑菌 靓彩',
+//     price:'2999',
+//     num:'1',
+//     sum:'2999'
+// }])
 // localStorage.removeItem(order)
 let ordersCreat = () => {
     orderBox.style.display = "block"

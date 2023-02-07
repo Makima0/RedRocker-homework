@@ -192,6 +192,7 @@ save.addEventListener('click', ()=>{
                 username:mobileAliasnumber,
                 password:setPswnumber,
             }])
+            localStorage.idLength=JSON.stringify(1)
             console.log(localStorage.id);
         }
             alert('注册成功')

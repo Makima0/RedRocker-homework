@@ -28,17 +28,20 @@
                         <b class="progressBar1"></b>
                     </li>
                     <li class="finish finish-02"><i>2</i><span>确认订单</span>
-                        <b class="progressBar2"></b>
+                        <b class="progressBar2" style="background-position: -10px -26px;"></b>
                     </li>
-                    <li><i>3</i><span>付款</span>
+                    <li class="finish finish-03"><i>3</i><span>付款</span>
                         <b class="progressBar3"></b>
                     </li>
-                    <li><i>4</i><span>支付成功</span>
+                    <li class="finish finish-04"><i>4</i><span>支付成功</span>
                         <b class="progressBar4"></b>
                     </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="OR-codebox">
+        <img src="收.jpg" class="QR-code">
     </div>
     <div class="wrapper checkout mt10">
         <div id="step2">
@@ -79,18 +82,11 @@
             </div>
             <div class="item">
                 <div class="item-main clearfix">
-                    <div class="td td-chk form">
-                        <div class="cart-checkbox">
-                            <input name="icart1_goods_sel" type="checkbox" id="110030481694712704050385"
-                                class="checkbox chk-item" aria-checked="false">
-                            <label class="checklabel" role="checbox" aria-label="选择商品复选框" aria-checked="false"></label>
-                        </div>
-                    </div>
                     <div class="td td-item">
                         <div class="item-pic">                        
                             <a href="" class="item-img-box tax-introduce tip-common-hover-fn-btn">
-                            <img src="" alt="" class="itemImg">
-                        </a></div>
+                                <img src="11" alt="" class="itemImg">
+                            </a></div>
                         <div class="item-info">
                         </div>
                     </div>
@@ -99,17 +95,22 @@
                     <div class="td td-amount"></div>
                     <div class="td td-sum">
                         <b class="sn-price">
-                            <i>¥</i><em class="sum"></em>
+                            共计<i>¥</i><em class="sum"></em>
                         </b>
                     </div>
                     <div class="td td-op">
-                        <a href="javascript:;" style=" text-decoration: none;">移入关注</a><br>
                         <a href="javascript:;" style="text-decoration: none;" class="delateBtn">删除</a>
                     </div>
                 </div>
             </div>
+            <p class="sum-pay-price sum-pay-price-sp">
+	        	<span id="sum-pay-text" tabindex="0" aria-label="应付金额899.00元">应付金额：</span>
+	        	<span class="sn-price price-color"><i>¥</i><em id="payAmountID"></em></span><br>
+                <a class="submit-btn">提交订单</a>
+	        </p>
         </div>
     </div>
+    <script src="pay.js"></script>
 </body>
 
 </html>

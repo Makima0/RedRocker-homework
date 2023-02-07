@@ -400,3 +400,7 @@ em, i {
     color: #fff;
     background-color: #f60;
 }
+.itemImg{
+    width: 80px;
+    height: 80px;
+}

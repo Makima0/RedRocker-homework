@@ -97,6 +97,10 @@ fieldset, img {
     left: 60px;
     background-position: 0 0;
 }
+.finish-02 b {
+    width: 158px;
+    left: -74px;
+}
 .finish b {
     position: absolute;
     display: inline-block;
@@ -199,4 +203,158 @@ fieldset, img {
     height: 36px;
     line-height: 36px;
     overflow: hidden;
+}.cart-table-header .th-item {
+    width: 218px;
+}
+.cart-table-header .th-specs {
+    width: 145px;
+}
+.cart-table-header .th-price {
+    width: 153px;
+}
+.cart-table-header .th-amount {
+    width: 130px;
+}
+.cart-table-header .th-sum {
+    width: 175px;
+    padding-left: 15px;
+}
+.cart-table-header .th-op {
+    width: 100px;
+}
+ .item-checked {
+    background-color: #fffbf2;
+}
+.item {
+    position: relative;
+    height: 102px;
+    margin-bottom: -1px;
+    padding: 15px 20px;
+    border: 1px solid #dfdfdf;
+}
+.item .td {
+    height: 94px;
+}
+ .td-chk {
+    width: 47px;
+    position: relative;
+}
+.td {
+    float: left;
+}
+.td-item {
+    width: 362px;
+}
+.td-item .item-pic {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    background: #fff;
+    overflow: hidden;
+}
+.itemImg{
+    width: 80px;
+    height: 80px;
+}
+.td-item .item-info {
+    width: 239px;
+    float: left;
+    line-height: 16px;
+}
+.td-specs {
+    position: relative;
+    width: 103px;
+}
+.td-price {
+    width: 106px;
+    text-align: right;
+}
+.td-amount {
+    width: 177px;
+    position: relative;
+    text-align: center;
+}
+.td-sum {
+    width: 126px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+b {
+    font-weight: bold;
+}
+.sn-price i {
+    font-family: Arial;
+}
+.sn-price em {
+    margin-left: 1px;
+}
+em, i {
+    font-style: normal;
+}
+.td-op {
+    padding-left: 115px;
+    width: 58px;
+    text-align: left;
+}
+.td-op a{
+    color: #666;
+}
+.td-op a:hover{
+    color: #f60;
+}
+.cart-checkbox {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+.sum-pay-price {
+    text-align: right;
+    color: #999;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+.sum-pay-price-sp {
+    margin-top: 7px;
+}
+.price-color {
+    font-size: 22px;
+    font-weight: 700;
+}
+.price-color{
+
+    color: #f60;
+}
+.price-color em {
+    margin-left: 1px;
+    font-family: tahoma;
+}
+.submit-btn{
+    float: right;
+    width: 105px;
+    height: 40px;
+    margin: 0 0 0 10px;
+    color: #fff;
+    background-color: #f60;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    line-height: 38px\9;
+}
+.OR-codebox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    display: none;
+}
+.QR-code{
+    width: 400px;
+    height: 500px;
 }

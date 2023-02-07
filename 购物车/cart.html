@@ -147,20 +147,20 @@
         //         Message:1,
         //         model:2,
         //         price:3,
-        //         num:6,
+        //         num:7,
         //         sum:5
         //         })
         //     localStorage.item=JSON.stringify(itemData)
         //     }
         // else{
-        //     localStorage.item=JSON.stringify([{
-        //         img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
-        //         Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
-        //         model:'【宽911】650升 母婴抑菌 靓彩',
-        //         price:'2999',
-        //         num:'1',
-        //         sum:'2999'
-        //     }])
+            localStorage.item=JSON.stringify([{
+                img:'https://imgservice.suning.cn/uimg1/b2c/image/eAJWLmK19xCbC26pT7BGwQ.jpg_800w_800h_4e',
+                Message:'美的(Midea)606L对开门冰箱一级能效双变频净味抑菌智能WIFI风冷无霜家用大容量BCD-606WKPZM(E)',
+                model:'【宽911】650升 母婴抑菌 靓彩',
+                price:'2999',
+                num:'1',
+                sum:'2999'
+            }])
         // }
         // localStorage.clear()
         let AllItem=JSON.parse(localStorage.item)
@@ -191,25 +191,34 @@
         let checklabel = document.querySelectorAll('.checklabel')
         let itemDe=document.querySelectorAll('.delateBtn')
         let newItem = document.querySelectorAll('.item')
+        // console.log(JSON.parse(localStorage.item));
+        //删除
+        let flag1=0
+        let newAllItem=[]
+        function remove(newItem1,index){
+            newAllItem=[]
+            newItem1.parentNode.removeChild(newItem1)
+            delete AllItem[index-1]
+            for(let n=0;n<AllItem.length;n++){
+                if(AllItem[n]){
+                    newAllItem.push(AllItem[n])
+                }
+            }
+            localStorage.item=JSON.stringify(newAllItem)
+            console.log(newAllItem);
+            flag1=1
+            }
         for ( let i = 0; i <AllItem.length+1; i++) {
             let newItem1=newItem[i]
             let index=i
-            let newAllItem=[]
             itemDe[i].addEventListener('click',()=>{
-                newItem1.parentNode.removeChild(newItem1)
-                delete AllItem[index-1]
-                for(let n=0;n<AllItem.length;n++){
-                    if(AllItem[n]){
-                        newAllItem.push(AllItem[n])
-                    }
-                }
-                localStorage.item=JSON.stringify(newAllItem)
+                remove(newItem1,index)
             })
         }
         //商品勾选
         let flag = 0
         let itemSum=document.querySelectorAll('.sum')
-        for (i = 0; i < checklabel.length; i++) {
+        for ( let i = 0; i < checklabel.length; i++) {
             let checklabel1 = checklabel[i]
             let itemSum1=itemSum[i]
             checklabel1.addEventListener('click', () => {
@@ -219,7 +228,7 @@
         let chooseAllCheckFrame= document.getElementById('chooseAllCheckFrame1')
         chooseAllCheckFrame1.addEventListener('click', () => {
             check(chooseAllCheckFrame1, "-36px", "-20px",0)
-            for (i = 1; i < checklabel.length; i++) {
+            for (let i = 1; i < checklabel.length; i++) {
                 let itemSum1=itemSum[i]
                 let checklabelAll = checklabel[i]
                 check(checklabelAll, "-36px", "-20px",itemSum1)
@@ -229,7 +238,7 @@
         let chooseAllCheckFrame2=document.querySelector('.mr10')
         chooseAllCheckFrame2.addEventListener('click',()=>{
             check(icon, "-36px", "-20px",0)
-            for (i = 1; i < checklabel.length; i++) {
+            for (let i = 1; i < checklabel.length; i++) {
                 let checklabelAll = checklabel[i]
                 let itemSum1=itemSum[i]
                 check(checklabelAll, "-36px", "-20px",itemSum1)
@@ -254,8 +263,31 @@
                 sum=cartPayAmount+num
                 cart1PayAmount.innerHTML=sum
             }
+            localStorage.check=JSON.stringify(sum)
             console.log(sum);
         }
+        //结算
+        let itemOrder=[]
+        let checkout=document.querySelector('.checkout').addEventListener('click',()=>{
+            if(flag1==0){
+                for(let i=1;i<AllItem.length+1;i++){
+                    if(checklabel[i].style.backgroundPositionY == "-36px"){
+                        itemOrder.push(AllItem[i-1])
+                        remove(newItem[i],i)
+                    }
+                }
+            }else{
+                for(let i=1;i<newAllItem.length+1;i++){
+                    if(checklabel[i].style.backgroundPositionY == "-36px"){
+                        itemOrder.push(newAllItem[i-1])
+                        remove(newItem[i],i)
+                    }
+                }    
+            }
+            console.log(newAllItem);
+            localStorage.order=JSON.stringify(itemOrder)
+            window.open('pay.html')
+        })
         itmes.style.display = "none"
     </script>
 </body>

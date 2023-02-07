@@ -181,10 +181,10 @@ save.addEventListener('click', ()=>{
                 username:mobileAliasnumber,
                 password:setPswnumber,
                 })
-            let idLenth=idData.length
-            localStorage.idLenth=JSON.stringify(idLenth)
+            let idLength=idData.length
+            localStorage.idLength=JSON.stringify(idLength)
             localStorage.id=JSON.stringify(idData)
-            console.log(JSON.parse(localStorage.idLenth));
+            console.log(JSON.parse(localStorage.idLength));
             console.log(JSON.parse(localStorage.id))
             }
         else{
@@ -198,6 +198,7 @@ save.addEventListener('click', ()=>{
         pageChange.content="3;url=login.html" 
         
     }
+    console.log(localStorage.idLength);
 }
     // let id=JSON.parse(localStorage.id)
 //     const formData = new FormData();
@@ -219,3 +220,4 @@ save.addEventListener('click', ()=>{
 //         }
 //  }
 )
+

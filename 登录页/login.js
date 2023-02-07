@@ -89,9 +89,9 @@ let submit=document.getElementById("submit").addEventListener('click',()=>{
         let idData=[]=JSON.parse(localStorage.id)
         // console.log(idData);
         // console.log(idData[0])
-        let idLenth=JSON.parse(localStorage.idLenth)
+        let idLength=JSON.parse(localStorage.idLength)
         // console.log(idLenth);
-        for(i=0;i<idLenth;i++){
+        for(i=0;i<idLength;i++){
             if(loginID==JSON.stringify(idData[i])){
                 flag=1
             }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv3&lv4</title>
+    <style>
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+html,body{
+    height: 100%;
+}
+    </style>
+</head>
+<body>
+    <!-- 防抖函数 -->
+    <label>防抖函数</label>
+    <input id="input1"></input>
+    <!-- 节流函数 -->
+    <label>节流函数</label>
+    <input id="input2"></input>
+</body>
+<script>
+    //防抖函数
+    function debounce (fn,delay=500)
+    {
+        let timer=0;
+        return function()
+        {
+            if(timer){
+                clearTimeout(timer)
+            }
+            timer=setTimeout(function(delay){
+                fn()
+                timer=0
+            },delay)
+        }
+    }
+    let input1=document.getElementById("input1")
+    input1.addEventListener("input",debounce(function(){console.log(input1.value);},600)
+    )
+    //节流函数
+    const throttle =function(fn,interval){
+        let timer=null
+        firstTime = true;
+        return function(){
+            let args =arguments;
+            if(firstTime){
+                fn.apply(this, args);
+                return firstTime =false;
+            }
+            if(timer){
+                return false;
+            }
+            timer=setTimeout(function(){
+                clearTimeout(timer);
+                timer = null;
+                fn.apply(this, args);
+            },interval||500)
+        }
+    }
+    let input2=document.getElementById("input2")
+    input2.addEventListener("input",throttle(function(){console.log(input2.value);},1500)
+    )
+</script>

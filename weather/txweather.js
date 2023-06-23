@@ -40,6 +40,7 @@ iconClose.addEventListener("click",()=>{
 ctAqi.addEventListener("click",()=>{
     ctPopWindow[1].className="ct-pop-window show"
 })
+console.log();
 function findweek(){
     for(let i=0;i<7;i++){
         if(week==weekMatch[i]){
@@ -56,7 +57,7 @@ function findweek(){
         }
     }
 }
-console.log(txtTime[1].innerHTML);
+// console.log(txtTime[1].innerHTML);
 function day_tom_img(x,y){
     if(x=="yun"){
         logo[0].src="./images/images/day/yun.png"
@@ -146,23 +147,23 @@ function weekimg(i){
 //         });
 // });
 
-// setInterval(() => {
-//     if(win.style.opacity=="0"){
-//         win.style.transform="translate(0px, 0px)"
-//         humidity.style.transform="translate(0px, -10px)"
-//         humidity.style.transition="0.5s"
-//         humidity.style.opacity="0"
-//         win.style.opacity="1"
+setInterval(() => {
+    if(win.style.opacity=="0"){
+        win.style.transform="translate(0px, 0px)"
+        humidity.style.transform="translate(0px, -10px)"
+        humidity.style.transition="0.5s"
+        humidity.style.opacity="0"
+        win.style.opacity="1"
         
-//     }else{
-//         humidity.style.transform="translate(0px, 0px)"
-//         win.style.transform="translate(0px, -10px)"
-//         win.style.transition="0.5s"
-//         win.style.opacity="0"
-//         humidity.style.opacity="1"
+    }else{
+        humidity.style.transform="translate(0px, 0px)"
+        win.style.transform="translate(0px, -10px)"
+        win.style.transition="0.5s"
+        win.style.opacity="0"
+        humidity.style.opacity="1"
         
-//     }
-// }, 5000);
+    }
+}, 5000);
 //搜索页
 let secLoaction=document.getElementById("sec-loaction")
 let btnCancel=document.getElementById("btn-cancel")
@@ -191,7 +192,7 @@ function history_city_change(cityname){
         history_city.appendChild(history1)
         history1.innerHTML=cityname
         history1.className="opt city"
-        console.log(cityname);
+        // console.log(cityname);
         if(historys.length>=2){
             historys[1].className="opt city center"
         }
@@ -234,7 +235,6 @@ let livingData
 
 //防抖函数
 function debounce(fn, delay) {
-    // timer 是在闭包中的
     let timer = null;
     
     return function() {
@@ -256,7 +256,7 @@ let dayweather_find=()=>fetch('https://www.yiketianqi.com/free/day?appid=4956328
     timewea()
     living()
     week=weatherData.week
-    console.log(week);
+    // console.log(week);
     findweek()
     week_find()
     tem.innerHTML=weatherData.tem
@@ -268,7 +268,7 @@ let dayweather_find=()=>fetch('https://www.yiketianqi.com/free/day?appid=4956328
     tem_max.innerHTML=weatherData.tem_night+"/"+weatherData.tem_day
     daywea.innerHTML=wea.innerHTML
     flagerr=0
-    console.log(weatherData);  // 打印响应数据到控制台
+    // console.log(weatherData); 
 })
 .catch(error => {
     // alert(error)
@@ -296,7 +296,7 @@ let week_find=()=>{fetch('https://www.yiketianqi.com/free/week?appid=49563285&ap
     tomorrowwea.innerHTML=weekData.data[1].wea
     day_tom_img(weekData.data[0].wea_img,weekData.data[1].wea_img)
     weekday[2].innerHTML="今天"
-    console.log(weekData);  // 打印响应数据到控制台
+    console.log(weekData); 
   })
   .catch(error => {
     flagerr=1
@@ -314,7 +314,7 @@ let timewea= ()=>{fetch('https://devapi.qweather.com/v7/weather/24h?location='+c
         imgMatch(i)
     }
     // txtTime.innerHTML=timeData.hourly
-console.log(timeData);  // 打印响应数据到控制台
+console.log(timeData); 
 })
 .catch(error => {
 console.error('Error:', error);
@@ -327,7 +327,7 @@ let living=()=>{fetch('https://devapi.qweather.com/v7/indices/1d?type=3,11,9,2,1
     for(let i=0;i<16;i++){
         livinglevel[i].innerHTML=livingData.daily[flaglive[i]-1].category
     }
-console.log(livingData);  // 打印响应数据到控制台
+console.log(livingData);  
 })
 .catch(error => {
 console.error('Error:', error);

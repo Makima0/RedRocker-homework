@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯天气</title>
+    <link rel="icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico" class="">
+    <link rel="stylesheet" type="text/css" href="txweather.css" class="">
+</head>
+
+<body>
+    <section id="sec-main" class="container C9 daymain">
+        <a id="link-back" class="" href="javascript:;"></a>
+        <a id="btn-share" class="" href="javascript:;"></a>
+        <!-- <a id="appShort" class="none" href="javascript:;">添加到桌面</a> -->
+        <!-- <audio id="weather-audio" src=""></audio> -->
+        <p id="txt-location"><span id="icon-location"></span><span class="locationtxt">重庆市</span></p>
+        <!-- <div id="ct-pub"><p class="txt hide">中央气象台 09:50发布</p></div> -->
+        <p id="txt-temperature" class="positive">22</p>
+        <p id="txt-weather">多云</p>
+        <div id="ct-wind-humidity">
+            <p class="txt txt-win" style="opacity:0;">北风 5级</p>
+            <p class="show txt txt-humidity">湿度 86%</p>
+        </div>
+        <p id="txt-tips">现在的温度比较舒适~</p>
+        <div id="ct-landscape">
+            <div class="layer" id="layer1" style="transform: translate3d(0px, 0px, 0px);"></div>
+            <div class="layer" id="layer2" style="transform: translate3d(0px, 0px, 0px);"></div>
+            <div class="layer" id="layer3" style="transform: translate3d(0px, 0px, 0px);"></div>
+        </div>
+        <div class="ct-aqi level1" data-boss="aqi">
+            <p id="til">28</p>
+            <p id="value">优</p>
+        </div>
+        <div class="ct-pop-window" style="display: none;">
+            <div class="bg-cover"></div>
+            <div class="ct-window">
+                <h3 class="title"></h3>
+                <p class="txt-info"></p><button class="btn-close">我知道了</button>
+            </div>
+        </div>
+        <div class="ct-pop-window hide" style="display: block;">
+            <div class="bg-cover"></div>
+            <div id="ct-air-pop" class="ct-window level1">
+                <div id="ct-main"><a id="icon-close"></a>
+                    <p id="titl">空气质量指数</p>
+                    <p id="val" class="air">28</p>
+                    <p id="level">优</p>
+                </div>
+                <table id="detal">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="val">no data</p>
+                                <p class="titl">PM2.5</p>
+                            </td>
+                            <td>
+                                <p class="val">no data</p>
+                                <p class="titl">PM10</p>
+                            </td>
+                            <td>
+                                <p class="val">no data</p>
+                                <p class="titl">SO2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="val">no data</p>
+                                <p class="titl">NO2</p>
+                            </td>
+                            <td>
+                                <p class="val">no data</p>
+                                <p class="titl">O3</p>
+                            </td>
+                            <td>
+                                <p class="val">no data</p>
+                                <p class="titl">CO</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="sec-tomorrow" class="container">
+        <div class="item">
+            <div class="top">
+                <p class="date">今天</p>
+                <p class="temperature" id="temperature_max">24/20°</p>
+            </div>
+            <div class="bottom">
+                <p class="weather" id="daywea">小雨转多云</p>
+                <img src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg" class="logo">
+            </div>
+        </div>
+        <div class="item">
+            <div class="top">
+                <p class="date">明天</p>
+                <p class="temperature" id="tomorrow-temperature_max">27/20°</p>
+            </div>
+            <div class="bottom">
+                <p class="weather" id="tomorrowwea">晴</p>
+                <img src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/00.svg" class="logo">
+            </div>
+        </div>
+    </section>
+    <section id="sec-hours" class="container">
+        <div id="ct-scroll" style="width: 400%;">
+            <ol id="ls-hours-weather">
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">13:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">23</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">14:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">24</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">15:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">24</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">16:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">24</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">17:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">24</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">18:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">23</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">19:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">23</p>
+                </li>
+                <li class="item keypoint" style="width: 3.84615%;">
+                    <p class="txt-time">19:57</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/set.svg"
+                        class="iconh icon">
+                    <p class="txt-degree">日落</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">20:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">22</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">21:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">22</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">22:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">22</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">23:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">22</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">明天</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">01:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">02:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">03:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">04:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">05:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item keypoint" style="width: 3.84615%;">
+                    <p class="txt-time">05:54</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/rise.svg"
+                        class="iconh icon">
+                    <p class="txt-degree">日出</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">06:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">07:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">21</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">08:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">20</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">09:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">22</p>
+                </li>
+                <li class="item" style="width: 3.84615%;">
+                    <p class="txt-time">10:00</p><img
+                        src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/00.svg"
+                        class="iconh icon">
+                    <p class="txt-degree positive">23</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section id="sec-days" class="container">
+        <div id="ct-scroll" style="width: 520px;">
+            <ol id="ls-days">
+                <li class="item" style="width: 65px;">
+                    <p class="day">昨天</p>
+                    <p class="date">06/21</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">大雨</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/09.svg"
+                            class="icon wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/07.svg"
+                            class="icon wea_img_n">
+                        <p class="weather weekweather">小雨</p>
+                    </div>
+                    <p class="wind">西风</p>
+                    <p class="wind">3级</p>
+                </li>
+                <li class="item" style="width: 65px;">
+                    <p class="day">今天</p>
+                    <p class="date">06/22</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">小雨</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/07.svg"
+                            class="icon  wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/02.svg"
+                            class="icon wea_img_n">
+                        <p class="weather weekweather">阴</p>
+                    </div>
+                    <p class="wind">东北风</p>
+                    <p class="wind">3级</p>
+                </li>
+                <li class="item" style="width: 65px;">
+                    <p class="day">明天</p>
+                    <p class="date">06/23</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">多云</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                            class="icon  wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                            class="icon wea_img_n">
+                        <p class="weather weekweather">多云</p>
+                    </div>
+                    <p class="wind">东北风</p>
+                    <p class="wind">3级</p>
+                </li>
+                <li class="item" style="width: 65px;">
+                    <p class="day">后天</p>
+                    <p class="date">06/24</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">多云</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/01.svg"
+                            class="icon  wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                            class="icon wea_img_n">
+                        <p class="weather weekweather">多云</p>
+                    </div>
+                    <p class="wind">东北风</p>
+                    <p class="wind">3级</p>
+                </li>
+                <li class="item" style="width: 65px;">
+                    <p class="day">周日</p>
+                    <p class="date">06/25</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">晴</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/00.svg"
+                            class="icon  wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/00.svg"
+                            class="icon  wea_img_n">
+                        <p class="weather weekweather">晴</p>
+                    </div>
+                    <p class="wind">东风</p>
+                    <p class="wind">3级</p>
+                </li>
+                <li class="item" style="width: 65px;">
+                    <p class="day">周一</p>
+                    <p class="date">06/26</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">晴</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/00.svg"
+                            class="icon  wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/01.svg"
+                            class="icon  wea_img_n">
+                        <p class="weather weekweather">多云</p>
+                    </div>
+                    <p class="wind">东北风</p>
+                    <p class="wind">3级</p>
+                </li>
+                <li class="item" style="width: 65px;">
+                    <p class="day">周二</p>
+                    <p class="date">06/27</p>
+                    <div class="ct-daytime">
+                        <p class="weather weekweather">晴</p><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/day/00.svg"
+                            class="icon wea_img_d">
+                    </div>
+                    <div class="ct-night"><img
+                            src="//mat1.gtimg.com/pingjs/ext2020/weather/mobile2.0/assets/weather/night/07.svg"
+                            class="icon wea_img_n">
+                        <p class="weather weekweather">小雨</p>
+                    </div>
+                    <p class="wind">东南风</p>
+                    <p class="wind">3级</p>
+                </li>
+            </ol>
+            <div id="ct-chart-days" style="width: 520px;">
+                <div class="chartjs-size-monitor"
+                    style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                    <div class="chartjs-size-monitor-expand"
+                        style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                        <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink"
+                        style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                        <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                    </div>
+                </div><canvas height="408" width="1560" style="display: block; height: 136px; width: 520px;"
+                    class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="sec-loaction" class="container hide">
+        <div id="ct-search"><a id="btn-cancel">取消</a>
+            <div id="ct-input"><span id="icon-search"></span><input type="text" id="i-location" placeholder="搜索地区"
+                    value=""></div>
+        </div>
+        <div id="ct-hot-city">
+            <div id="ct-cur">
+                <p class="title">当前定位</p><a href="javascript:;" class="match opt">重庆市</a>
+            </div>
+            <div id="ct-history"><a href="javascript:;" id="btn-clean"></a>
+                <p class="title">历史记录</p>
+                <ul class="ls-city history_city">
+                    <!-- <li class="opt city ">重庆</li>
+                    <li class="opt city center">西安</li>
+                    <li class="opt city ">天津</li> -->
+                </ul>
+            </div>
+            <p class="title">热门城市</p>
+            <ul class="ls-city">
+                <li class="opt city hot_city" data-province="北京" data-city="北京">北京</li>
+                <li class="opt city center hot_city" data-province="上海" data-city="上海">上海</li>
+                <li class="opt city  hot_city" data-province="广东" data-city="广州">广州</li>
+                <li class="opt city  hot_city" data-province="广东" data-city="深圳">深圳</li>
+                <li class="opt city center hot_city" data-province="河南" data-city="郑州">郑州</li>
+                <li class="opt city  hot_city" data-province="陕西" data-city="西安">西安</li>
+                <li class="opt city  hot_city" data-province="江苏" data-city="南京">南京</li>
+                <li class="opt city center hot_city" data-province="浙江" data-city="杭州">杭州</li>
+                <li class="opt city  hot_city" data-province="湖北" data-city="武汉">武汉</li>
+                <li class="opt city  hot_city" data-province="四川" data-city="成都">成都</li>
+                <li class="opt city center hot_city" data-province="辽宁" data-city="沈阳">沈阳</li>
+                <li class="opt city  hot_city" data-province="天津" data-city="天津">天津</li>
+            </ul>
+        </div>
+    </section>
+    <section id="sec-living" class="container">
+        <div id="living-scroll">
+            <div class="react-swipe-container " style="overflow: hidden; visibility: visible; position: relative;width: 200%;">
+                <div style="overflow: hidden; position: relative; width: 780px;">
+                    <ul class="ls-living"
+                        style="float: left; width: 390px; position: relative; transition-property: transform; left: 0px; transition-duration: 300ms; transform: translate(0px, 0px) translateZ(0px);"
+                        data-index="0">
+                        <li class="item" data-boss="shzs"><span class="icon icon_chuanyi_hot"></span>
+                            <p class="content">热</p>
+                            <p class="title">穿衣</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_yusan"></span>
+                            <p class="content">不带伞</p>
+                            <p class="title">雨伞</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_ganmao"></span>
+                            <p class="content">少发</p>
+                            <p class="title">感冒</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_xiche"></span>
+                            <p class="content">适宜</p>
+                            <p class="title">洗车</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_yundong"></span>
+                            <p class="content">较适宜</p>
+                            <p class="title">运动</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_fangsai"></span>
+                            <p class="content">中等</p>
+                            <p class="title">防晒</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_diaoyu"></span>
+                            <p class="content">较适宜</p>
+                            <p class="title">钓鱼</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_lvyou"></span>
+                            <p class="content">适宜</p>
+                            <p class="title">旅游</p>
+                        </li>
+                    </ul>
+                    <ul class="ls-living"
+                        style="float: left; width: 390px; position: relative; transition-property: transform; left: -390px; transition-duration: 300ms; transform: translate(390px, 0px) translateZ(0px);"
+                        data-index="1">
+                        <li class="item" data-boss="shzs"><span class="icon icon_jiaotong"></span>
+                            <p class="content">良好</p>
+                            <p class="title">交通</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_wurankuosan"></span>
+                            <p class="content">中</p>
+                            <p class="title_wurankuosan">空气污染扩散条件</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_shushidu"></span>
+                            <p class="content">舒适</p>
+                            <p class="title">舒适度</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_liangshai"></span>
+                            <p class="content">适宜</p>
+                            <p class="title">晾晒</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_huazhuang"></span>
+                            <p class="content">去油</p>
+                            <p class="title">化妆</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_chenlian"></span>
+                            <p class="content">较适宜</p>
+                            <p class="title">晨练</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_guomin"></span>
+                            <p class="content">不易发</p>
+                            <p class="title">过敏</p>
+                        </li>
+                        <li class="item" data-boss="shzs"><span class="icon icon_zhongshu"></span>
+                            <p class="content">无中暑风险</p>
+                            <p class="title">中暑</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="living-tab"><span class="current"></span><span class=""></span></div>
+        <div class="ct-pop-window">
+            <div class="bg-cover"></div>
+            <div class="ct-window">
+                <h3 class="title"></h3>
+                <p class="txt-info"></p><button class="btn-close">我知道了</button>
+            </div>
+        </div>
+    </section>
+    <script src="txweather.js">
+    </script>
+</body>
+
+</html>

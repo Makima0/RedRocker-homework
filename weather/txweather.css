@@ -1,0 +1,796 @@
+body, html {
+    font: 12px/18px Simsun,Helvetica,Arial,sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, td, textarea, th, ul {
+    padding: 0;
+    margin: 0;
+}
+div, footer, li, ol, p, section, ul {
+    box-sizing: border-box;
+}
+* {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust: none;
+}
+a {
+    color: inherit;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+::selection {
+    background-color: #690;
+    color: #fff;
+}
+/* 主体部分 开始 */
+#sec-main #ct-pub {
+    height: 12px;
+}
+#sec-main.C9 {
+    background-image: linear-gradient(-90deg,#50ade8,#7ae0fa);
+    background-image: -webkit-linear-gradient(-90deg,#50ade8,#7ae0fa);
+}
+#sec-main {
+    height: 470px;
+    background-image: linear-gradient(-90deg,#3bbcff,#4af4ff);
+    background-image: -webkit-linear-gradient(-90deg,#3bbcff,#4af4ff);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.container {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#sec-main #btn-voice, #sec-main #link-back {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    top: 15px;
+}
+#sec-main #link-back {
+    left: 8px;
+    /* background-color: #fff; */
+    background-image: url(/images/images/arrow\(1\).png);
+}
+* {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust: none;
+}
+#sec-main #btn-share {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    /* background-color: #fff; */
+    background-image: url(/images/images/link_icon\(1\).png);
+}
+#sec-main #txt-location {
+    height: 16px;
+    line-height: 16px;
+    width: 76%;
+    margin: 18px 12% 6px;
+    font-size: 16px;
+    color: #fff;
+    -webkit-tap-highlight-color: transparent;
+}
+#sec-main #txt-location #icon-location {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 4px;
+    background-size: 16px;
+    background-image: url(/images/images/location.png);
+}
+#sec-main #txt-temperature {
+    font-size: 62px;
+    color: #fff;
+    line-height: 62px;
+    height: 62px;
+    margin-top: 66px;
+    position: relative;
+}
+#sec-main #txt-temperature:after {
+    content: "\B0";
+    position: absolute;
+    text-align: left;
+    top: 0;
+}
+#sec-main #txt-weather {
+    font-size: 22px;
+    color: #fff;
+    line-height: 22px;
+    height: 22px;
+    margin-top: 8px;
+}
+#sec-main #ct-wind-humidity {
+    margin-top: 10px;
+    height: 14px;
+    position: relative;
+}
+#sec-main #ct-wind-humidity .txt {
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-duration: .75s;
+    -webkit-animation-duration: .75s;
+    animation-name: wind-hide;
+    -webkit-animation-name: wind-hide;
+}
+#sec-main #ct-wind-humidity .txt.show {
+    animation-name: wind-show;
+    -webkit-animation-name: wind-show;
+}
+#sec-main #txt-tips {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    height: 16px;
+    margin: 50px 60px 0;
+    position: relative;
+    z-index: 2;
+}
+
+#sec-main #ct-landscape, #sec-main #ct-landscape .layer {
+    position: absolute;
+    bottom: 0;
+    top: 60px;
+}
+#sec-main #ct-landscape {
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+#sec-main.C9 #layer1 {
+    background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/1760b3821904f2080269709e89a22e26.png);
+}
+#sec-main #ct-landscape .layer {
+    content: "";
+    left: -6%;
+    right: -6%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+#sec-main #ct-landscape, #sec-main #ct-landscape .layer {
+    position: absolute;
+    bottom: 0;
+    top: 60px;
+}
+#sec-main #layer1 {
+    z-index: 3;
+    background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/982194185a079fad9fd6d7eac312b378.png);
+}
+#sec-main.C9 #layer2 {
+    background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/4f99c267041530f361776065c5af2671.png);
+}
+#sec-main #layer2 {
+    z-index: 2;
+    background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/8fd2514cf9551f15e6925b935c8ce13a.png);
+}
+#sec-main.C9 #layer3 {
+    background-image: url(https://mat1.gtimg.com/pingjs/ext2020/tianqi/mobilev2/2bbce2b25f1f2a8af1fbf7c9215a6afe.png);
+}
+#sec-main .ct-aqi.level1 {
+    background-color: #a3d765;
+}
+#sec-main .ct-aqi {
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.12);
+    height: 44px;
+    padding: 8px 12px;
+    position: absolute;
+    border-radius: 8px;
+    top: 67px;
+    left: 8px;
+    background: #ffbf62;
+    z-index: 2;
+}
+#sec-main .ct-aqi #til {
+    opacity: .8;
+    font-size: 12px;
+    color: #fff;
+    line-height: 12px;
+    height: 12px;
+    margin-bottom: 3px;
+}
+#sec-main .ct-aqi #value {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #fff;
+    height: 14px;
+    line-height: 14px;
+}
+.ct-pop-window {
+    text-align: center;
+}
+.ct-pop-window.show .bg-cover {
+    display: block;
+    z-index: 999;
+}
+.ct-pop-window .bg-cover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.43);
+    z-index: 999;
+    display: none;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+#ct-air-pop {
+    padding-bottom: 5px;
+}
+
+.ct-pop-window.show .ct-window {
+    visibility: visible;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: 1;
+    margin-top: -5%;
+}
+.ct-pop-window .ct-window {
+    border-radius: 8px;
+    background: #fff;
+    padding-bottom: 20px;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    z-index: 1000;
+    visibility: hidden;
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    opacity: 0;
+    -webkit-transition: all .3s ease 50ms;
+    transition: all .3s ease 50ms;
+}
+#ct-air-pop.level1 #ct-main {
+    background-color: #70defc;
+    background-image: url();
+}
+#ct-air-pop #ct-main {
+    height: 250px;
+    width: 250px;
+    background-size: 250px auto;
+    background-position-y: 190px;
+    background-repeat: no-repeat;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-top: 50px;
+}
+#ct-air-pop #ct-main #icon-close {
+    position: absolute;
+    background-image: url(/images/images/close\(1\).png);
+    height: 20px;
+    width: 20px;
+    top: 11px;
+    right: 11px;
+}
+#ct-air-pop #ct-main #titl {
+    font-size: 14px;
+    color: #fff;
+    line-height: 14px;
+}
+#ct-air-pop #ct-main #val {
+    font-size: 60px;
+    color: #fff;
+    line-height: 60px;
+    margin: 15px 0 20px;
+}
+#ct-air-pop.level1 #ct-main #level {
+    background-color: #a3d765;
+}
+#ct-air-pop #ct-main #level {
+    border-radius: 6px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 14px;
+}
+#ct-air-pop #detal {
+    height: 112px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#ct-air-pop #detal td {
+    width: 33.333%;
+}
+#ct-air-pop #detal .val {
+    font-size: 14px;
+    color: #434343;
+    line-height: 14px;
+    margin-bottom: 5px;
+}
+#ct-air-pop #detal .titl {
+    font-size: 11px;
+    color: #b2b2b2;
+    line-height: 11px;
+}
+#ct-air-pop #detal td:nth-child(2) {
+    position: relative;
+}
+#ct-air-pop #detal td:nth-child(2):before {
+    left: 0;
+}
+
+#ct-air-pop #detal td:nth-child(2):after, #ct-air-pop #detal td:nth-child(2):before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 1px;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    background: #e4e4e4;
+}
+#ct-air-pop #detal td:nth-child(2):after {
+    right: 0;
+}
+#ct-air-pop #detal td:nth-child(2):after, #ct-air-pop #detal td:nth-child(2):before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 1px;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    background: #e4e4e4;
+}
+#ct-air-pop #detal tr:first-child:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background: #e4e4e4;
+    top: auto;
+    bottom: 61px;
+}
+/* 主体部分结束 */
+/*今明天气部分开始*/
+#sec-tomorrow {
+    background: #fff;
+    height: 103px;
+    padding-top: 26px;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+    position: relative;
+}
+#sec-tomorrow .item {
+    float: left;
+    width: 50%;
+    height: 52px;
+    font-size: 14px;
+    color: #434343;
+    line-height: 14px;
+    padding: 0 20px;
+}
+#sec-tomorrow .item .top {
+    height: 12px;
+    margin-bottom: 13px;
+}
+#sec-tomorrow .item .top .date {
+    float: left;
+}
+#sec-tomorrow .item .top .temperature {
+    float: right;
+}
+#sec-tomorrow .item .bottom {
+    height: 22px;
+}
+#sec-tomorrow .item .bottom .weather {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+}
+#sec-tomorrow .item .bottom .logo {
+    float: right;
+    height: 22px;
+    width: 22px;
+}
+
+img {
+    border: none;
+    display: block;
+}
+#sec-tomorrow:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 52px;
+    background-color: #f0f0f0;
+    left: 50%;
+    top: 26px;
+}
+/*今明天气部分结束*/
+/*小时天气部分开始*/
+#sec-hours {
+    height: 136px;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+#sec-hours #ct-scroll {
+    width: 740%;
+}
+#sec-hours #ls-hours-weather {
+    width: 100%;
+}
+#sec-hours #ls-hours-weather .item {
+    float: left;
+    width: 2.083%;
+    text-align: center;
+    position: relative;
+}
+#sec-hours #ls-hours-weather .item .txt-time {
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    color: #999;
+}
+#sec-hours #ls-hours-weather .item .icon {
+    height: 24px;
+    width: 24px;
+    display: block;
+    margin: 15px auto;
+}
+#sec-hours #ls-hours-weather .item .txt-degree, #sec-hours #ls-hours-weather .item .txt-key {
+    font-size: 14px;
+    color: #434343;
+    line-height: 14px;
+    height: 14px;
+    position: relative;
+}
+#sec-hours #ls-hours-weather .item .txt-degree:after {
+    content: "\B0";
+    position: absolute;
+    text-align: left;
+    top: 0;
+}
+/*小时天气部分开始*/
+/* 一周天气部分开始 */
+#sec-days {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
+    height: 391px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#sec-days #ls-days .item {
+    float: left;
+    text-align: center;
+}
+#sec-days #ls-days .item:first-child .date, #sec-days #ls-days .item:first-child .day, #sec-days #ls-days .item:first-child .weather, #sec-days #ls-days .item:first-child .wind {
+    color: #b2b2b2;
+}
+
+#sec-days #ls-days .item .date, #sec-days #ls-days .item .day {
+    font-size: 12px;
+    color: #999;
+    line-height: 12px;
+    height: 12px;
+}
+#sec-days #ls-days .item .date {
+    margin: 5px 0 15px;
+}
+#sec-days #ls-days .item .ct-daytime .weather {
+    margin-bottom: 14px;
+}
+#sec-days #ls-days .item:first-child .icon {
+    opacity: .5;
+}
+#sec-days #ls-days .item .icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto;
+}
+#sec-days #ls-days .item .ct-night {
+    margin-top: 136px;
+}
+#sec-days #ls-days .item .wind {
+    font-size: 12px;
+    color: #b2b2b2;
+    line-height: 12px;
+    height: 12px;
+    width: 40px;
+    margin: 0 auto 6px;
+    overflow: hidden;
+}
+#sec-days #ls-days:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+#sec-days #ct-chart-days {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 136px;
+    top: 121px;
+}
+/* 一周天气部分结束 */
+/* 搜索栏部分 开始*/
+#sec-loaction.show {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+#sec-loaction {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transform: translate3d(0,-120%,0);
+    transform: translate3d(0,-120%,0);
+    -webkit-transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+}
+#sec-loaction #ct-search {
+    height: 45px;
+    padding: 7px 0;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+#sec-loaction #ct-search #btn-cancel {
+    float: right;
+    font-size: 14px;
+    color: #434343;
+    width: 60px;
+    line-height: 30px;
+    text-align: center;
+}
+#sec-loaction #ct-search #ct-input {
+    position: relative;
+    margin-right: 60px;
+    margin-left: 13px;
+}
+#sec-loaction #ct-search #ct-input #icon-search {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 8px;
+    left: 10px;
+    background-size: 14px;
+    background-image: url(/images/images/search.png);
+}
+#sec-loaction #ct-search #ct-input #i-location {
+    width: 100%;
+    height: 30px;
+    padding: 5px 0 5px 32px;
+    box-sizing: border-box;
+    line-height: 24px;
+    background: #f2f2f2;
+    border-radius: 44px;
+    font-size: 14px;
+    color: #434343;
+    -webkit-appearance: none;
+    border-width: 0;
+}
+#sec-loaction #ct-hot-city {
+    padding: 12px 13px 7px;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+#sec-loaction #ct-hot-city #ct-cur, #sec-loaction #ct-hot-city .ls-city {
+    clear: both;
+}
+#sec-loaction #ct-hot-city .title {
+    font-size: 16px;
+    color: #434343;
+    height: 22px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+#sec-loaction #ct-hot-city .opt {
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border-radius: 44px;
+    padding: 0 16px;
+    width: 32%;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #434343;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#sec-loaction #ct-hot-city #ct-cur:after, #sec-loaction #ct-hot-city .ls-city:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+#sec-loaction #ct-hot-city #btn-clean {
+    float: right;
+    background-image: url();
+    background-size: 17px 17px;
+    height: 17px;
+    width: 17px;
+    margin-top: 21px;
+}
+#sec-loaction #ct-hot-city #ct-history .title {
+    float: left;
+}
+#sec-loaction #ct-hot-city .opt.center {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#sec-loaction #ct-hot-city #ct-cur:after, #sec-loaction #ct-hot-city .ls-city:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+/* 搜索栏部分 结束*/
+/* 生活指数部分 开始 */
+#sec-living {
+    overflow-y: hidden;
+}
+#sec-living #living-scroll .ls-living:first-child {
+    border-left: 1px solid #e4e4e4;
+}
+#sec-living #living-scroll .ls-living {
+    width: 50%;
+    float: left;
+    border-top: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+#sec-living #living-scroll .ls-living .item {
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 94px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+#sec-living #living-scroll .ls-living .item .icon_chuanyi_hot {
+    background-image: url(/images/images/cloth\(1\).png)}
+
+#sec-living #living-scroll .ls-living .item .icon {
+    height: 24px;
+    width: 24px;
+    display: block;
+    margin: 15px auto 10px;
+    background-size: 24px;
+}
+#sec-living #living-scroll .ls-living .item .content {
+    font-size: 14px;
+    color: #434343;
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 6px;
+}
+#sec-living #living-scroll .ls-living .item .title, #sec-living #living-scroll .ls-living .item .title_wurankuosan {
+    color: #999;
+    height: 12px;
+    line-height: 12px;
+}
+#sec-living #living-scroll .ls-living .item .icon_yusan {
+    background-image: url(/images/images/umbrella\(1\).png)}
+#sec-living #living-scroll .ls-living .item .icon_ganmao {
+    background-image: url(/images/images/pill\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_xiche {
+    background-image: url(/images/images/limit\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_yundong {
+    background-image: url(/images/images/sports\(1\).png);}
+#sec-living #living-scroll .ls-living .item .icon_fangsai {
+    background-image: url(/images/images/sun\(1\).png);}
+#sec-living #living-scroll .ls-living .item .icon_diaoyu {
+    background-image: url(/images/images/diaoyu\(1\).png);}
+#sec-living #living-scroll .ls-living .item .icon_lvyou {
+    background-image: url(/images/images/lvyou\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_jiaotong {
+    background-image: url(/images/images/car\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_wurankuosan {
+    background-image: url(/images/images/air\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_shushidu {
+    background-image: url(/images/images/smile\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_liangshai {
+    background-image: url(/images/images/liangshai\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_huazhuang {
+    background-image: url(/images/images/kouhong\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_chenlian {
+    background-image: url(/images/images/chenlian\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_guomin {
+    background-image: url(/images/images/cold\(1\).png);
+}
+#sec-living #living-scroll .ls-living .item .icon_zhongshu {
+    background-image: url(/images/images/hot\(1\).png);
+}
+#sec-living .living-tab {
+    width: 100%;
+    text-align: center;
+    background: #f4f4f4;
+}
+#sec-living .living-tab span {
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    background: #e3e3e3;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+#sec-living .living-tab span.current {
+    background: #cecece;
+}
+
+#sec-living .living-tab span {
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    background: #e3e3e3;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+#sec-living:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+/* 生活指数部分 开始 */

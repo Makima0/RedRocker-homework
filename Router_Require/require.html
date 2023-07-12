@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Require Example</title>
+</head>
+<body>
+  <script>
+    //定义一个自定义的 require 函数
+    function  myRequire(dependencies, callback) {
+      const modules = [] 
+      let Counter = 0 
+      //加载依赖模块
+      dependencies.forEach((dependency, index) => {
+        const script = document.createElement('script') 
+        script.src = dependency 
+        script.addEventListener('load', () => {
+          modules[index] = window.module.exports 
+          Counter++ 
+          //当所有依赖都加载完成后调用回调函数
+          if (Counter === dependencies.length) {
+            callback.apply(null, modules) 
+          }
+        }) 
+        document.head.appendChild(script) 
+      }) 
+    }
+    //使用自定义的 require 函数加载模块
+     myRequire(['./module1.js', './module2.js'], (module1, module2) => {
+      //使用加载的模块
+      module1.sayHello() 
+      module2.sayHi() 
+    }) 
+  </script>
+</body>
+</html>

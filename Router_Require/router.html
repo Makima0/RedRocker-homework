@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Example</title>
+    <style>
+        a{
+           text-decoration: none;
+           padding: 20px;
+           font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>这是一个简单的router</h1>
+    <a href="/">1</a>
+    <a href="/2">2</a>
+    <a href="/3">3</a>
+    <div id="content">
+        <h2>1 Page Content</h2>
+    </div>
+    <script>
+        // 路由切换
+        const routes = {
+            '/': page1,
+            '/2': page2,
+            '/3': page3
+        }
+        function pageTo(route) {
+            console.log(route)
+            routes[route]()
+        }
+        let content = document.getElementById('content')
+        // 路由处理函数
+        function page1() {
+            content.innerHTML = '<h2>1 Page Content</h2>'
+        }
+        function page2() {
+            content.innerHTML = '<h2>2 Page Content</h2>'
+        }
+        function page3() {
+            content.innerHTML = '<h2>3 Page Content</h2>'
+        }
+        const links = document.querySelectorAll('a')
+        // 添加点击事件
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault()
+                history.pushState({}, '', link.getAttribute('href'))
+                pageTo(window.location.pathname)
+                console.log('Link clicked:', link.getAttribute('href'))
+            })
+            window.addEventListener('popstate', () => {
+                pageTo(window.location.pathname)
+            })
+        })
+    </script>
+</body>
+
+</html>
